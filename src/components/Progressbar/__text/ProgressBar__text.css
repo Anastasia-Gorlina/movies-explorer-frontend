@@ -1,0 +1,18 @@
+.ProgressBar__text {
+    color: white;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    margin: 0;
+}
+
+.ProgressBar__text:first-of-type {
+    background-color: black;
+    color: white;
+}
+
+@media screen and (max-width: 321px) {
+    .ProgressBar__text{
+        padding-top: 11px;
+        padding-bottom: 11px;
+    }
+}

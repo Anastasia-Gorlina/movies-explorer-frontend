@@ -1,0 +1,8 @@
+.FormList__button_link {
+    text-decoration:none;
+    color:#FF4062;
+}
+
+.FormList__button_link:hover {
+    opacity: 0.6;
+}

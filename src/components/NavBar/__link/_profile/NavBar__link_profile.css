@@ -1,0 +1,21 @@
+.NavBar__link_profile{
+    justify-content: flex-end;
+    align-content: end;
+    justify-items: end;
+    justify-self: end;
+    padding: 8px 20px 8px 20px;
+    align-self: center;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    text-decoration: none;
+    color: #000000;
+}
+
+
+@media screen and (max-width: 1024px) {
+    .NavBar__link_profile {
+        display: none;
+    }
+}

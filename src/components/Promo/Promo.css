@@ -1,0 +1,19 @@
+.Promo {
+    background-color: #F3C1F8;
+    padding-top: 250px;
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: url(../../images/pic__COLOR_landing-logo.svg);
+    background-position: center 142px;
+    background-repeat: no-repeat;
+    background-size: 320px;
+}
+
+
+
+@media screen and (max-width: 321px) {
+    .Promo {
+        padding-top: 220px;
+    }
+}

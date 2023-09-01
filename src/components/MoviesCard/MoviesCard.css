@@ -1,0 +1,7 @@
+.MoviesCard {
+    display: grid;
+    margin: 0;
+    grid-template-columns: 1fr;
+    background-color: #FFFFFF;
+    overflow: hidden;
+}

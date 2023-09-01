@@ -1,0 +1,21 @@
+.Movies__search-button {
+    border-radius: 50px;
+    color: white;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    padding: 0;
+    width: 59px;
+    height: 34px;
+    border:none;
+    align-self: center;
+    cursor: pointer;
+    background: url("../../../images/button-black.svg");
+    margin-right: 30px;
+}
+
+@media screen and (max-width: 768px) {
+    .Movies__search-button {
+        margin-right: 19px;
+    }
+}
