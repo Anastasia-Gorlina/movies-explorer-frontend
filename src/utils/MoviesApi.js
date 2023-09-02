@@ -25,7 +25,7 @@ export class Api {
 }
 
 const api = new Api({
-    adress: '',
+    adress: 'https://anastasia.gorlina.nomoreparties.co/',
 })
 
 export default api;

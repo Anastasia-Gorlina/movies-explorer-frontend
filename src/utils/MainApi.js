@@ -49,7 +49,7 @@ createMovie(data) {
 }
 
 const mainApi = new MainApi({
-    baseUrl: "",
+    baseUrl: "https://anastasia.gorlina.nomoreparties.co/",
     headers: {
         "Content-Type": "application/json",
     },
