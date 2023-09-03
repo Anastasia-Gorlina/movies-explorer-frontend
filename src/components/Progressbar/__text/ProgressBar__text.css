@@ -6,8 +6,8 @@
 }
 
 .ProgressBar__text:first-of-type {
-    background-color: black;
-    color: white;
+    color: black;
+
 }
 
 @media screen and (max-width: 321px) {
