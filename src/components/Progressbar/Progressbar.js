@@ -5,7 +5,8 @@ const ProgressBar = ({ completeColor, notCompleteColor, completed, titleBar1, ti
 
     const ProgressLineOne = {
         width: `${completed}%`,
-        backgroundColor: completeColor
+        backgroundColor: completeColor,
+        color: 'white'
     }
     
     const ProgressLineTwo = {
@@ -19,7 +20,6 @@ const ProgressBar = ({ completeColor, notCompleteColor, completed, titleBar1, ti
 
     const ProgressLineSpanTwo = {
         width: `${'100' - completed}%`,
-
     }
 
     return (
