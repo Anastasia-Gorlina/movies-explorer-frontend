@@ -25,7 +25,7 @@ export class Api {
 }
 
 const api = new Api({
-    adress: 'https://anastasia.gorlina.nomoreparties.co/',
+    adress: 'https://api.nomoreparties.co/beatfilm-movies',
 })
 
 export default api;

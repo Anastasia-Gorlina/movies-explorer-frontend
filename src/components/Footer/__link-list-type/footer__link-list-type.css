@@ -3,7 +3,7 @@
     font-size: 13px;
     line-height: 16px;
     text-decoration: none;
-    margin: 0 auto 12px 20px;
+    margin:  auto 12px 20px;
 }
 
 .footer__link-list-type:hover {
@@ -12,6 +12,6 @@
 
 @media screen and (max-width:390x) {
     .footer__link-list-type {
-        margin: 0 auto 12px auto;
+        margin:  auto 12px auto;
     }
 }

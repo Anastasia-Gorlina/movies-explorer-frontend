@@ -1,5 +1,6 @@
 @import url('./vendor/normalize.css');
 @import url('./vendor/fonts/fonts.css');
+
 @import url('./components/App/App.css');
 
 @import url('./components/Header/header.css');
@@ -7,9 +8,10 @@
 @import url('./components/opacity-buttons/opacity-buttons.css');
 @import url('./components/Preloader/Preloader.css');
 
-@import url('./components/FormList/__form/FormList__form.css');
+@import url('./components/FormList/__form/FormList__form');
 @import url('./components/FormList/__logo/FormList_logo.css');
 @import url('./components/FormList/__title/Formlist__title.css');
+@import url('./components/FormList/__input-error/Formlist__input-error.css');
 @import url('./components/FormList/__button/FormList__button.css');
 @import url('./components/FormList/__button//_span/FormList__button_span.css');
 @import url('./components/FormList/__button/_link/FormList__button_link.css');
@@ -30,18 +32,21 @@
 
 @import url('./components/NavTab/NavTab.css');
 @import url('./components/NavTab/__list/NavTab__list.css');
-@import url('./components/NavTab/__link-list-type/NavTab__link-list-type.css');
+@import url('./components/NavTab/__link/NavTab__link.css');
 @import url('./components/NavTab/__buttonText/NavTab__buttonText.css');
 @import url('./components/NavTab/__icon/NavTab__icon.css');
 @import url('./components/NavTab/__elements/NavTab__elements.css');
 @import url('./components/NavTab/__techs/NavTab__techs.css');
 
+
 @import url('./components/Profile/Profile.css');
 @import url('./components/Profile/__input/Profile__input.css');
 @import url('./components/Profile/__input/_name/Profile__input_name.css');
+
 @import url('./components/Profile/__title/Profile__title.css');
 @import url('./components/Profile/__label/Profile__label.css');
 @import url('./components/Profile/__button/Profile__button.css');
+@import url('./components/Profile/__input-error/Profile__input-error.css');
 @import url('./components/Profile/__button/_item/Profile__button_item.css');
 
 @import url('./components/NotFound/NotFound.css');
@@ -61,10 +66,12 @@
 @import url('./components/Movies/__checkbox/Movies__checkbox.css');
 @import url('./components/Movies/__checkbox/_name/Movies__checkbox_name.css');
 @import url('./components/Movies/__add-button/Movies__add-button.css');
+@import url('./components/Movies/__input-error/Movies__input-error.css');
 
 @import url('./components/MoviesCard/MoviesCard.css');
 @import url('./components/MoviesCard/__mesto-like/MoviesCard__mesto-like.css');
 @import url('./components/MoviesCard/__mesto-like/_active/MoviesCard__mesto-like_active.css');
+@import url('./components/MoviesCard/__remove-like/MoviesCard__remove-like.css');
 @import url('./components/MoviesCard/__image/MoviesCard__image.css');
 @import url('./components/MoviesCard/__info/MoviesCard__info.css');
 @import url('./components/MoviesCard/__text/MoviesCard__text.css');
@@ -75,6 +82,8 @@
 
 @import url('./components/Promo/Promo.css');
 @import url('./components/Promo/__title/Promo__title.css');
+
+@import url('./components/NavTab/NavTab.css');
 
 @import url('./components/MainStack/MainStack.css');
 @import url('./components/MainStack/__title/MainStack__title.css');
@@ -88,8 +97,8 @@
 @import url('./components/Progressbar/__text/ProgressBar__text.css');
 @import url('./components/Progressbar/__span/ProgressBar__span.css');
 
-@import url('./components/Techs/Tech.css');
-@import url('./components/Techs/__title/Tech__title.css');
+@import url('./components/Techs/Techs.css');
+@import url('./components/Techs/__title/Techs__title.css');
 @import url('./components/Techs/__description/Techs__description.css');
 @import url('./components/Techs/__elements/Techs__elements.css');
 @import url('./components/Techs/__icon/Techs__icon.css');
@@ -110,6 +119,14 @@
 @import url('./components/Portfolio/__title-item/portfolio__title-item.css');
 @import url('./components/Portfolio/__item/portfolio__item.css');
 @import url('./components/Portfolio/__item-web/portfolio__item-web.css');
+
+@import url('./components/Popup/popup.css');
+@import url('./components/Popup/__visible/popup__visible.css');
+@import url('./components/Popup/__overlay/popup__overlay.css');
+@import url('./components/Popup/__container/popup__container.css');
+@import url('./components/Popup/__close-button/popup__close-button.css');
+@import url('./components/Popup/__infoToolTip/_image/popup__infoToolTip_image.css');
+@import url('./components/Popup/__infoToolTip/_text/popup__infoToolTip_text.css');
 
 @import url('./components/Footer/footer.css');
 @import url('./components/Footer/__description/footer__description.css');

@@ -12,9 +12,23 @@
 }
 
 .portfolio__item-web:hover {
-    color: #2BE080;
+    color: #F3C1F8;
     transition: 0.7s
 }
+
+.portfolio__item-web::after {
+    content: "↗";
+    min-width: 18px;
+    position: absolute;
+    right: 0;
+}
+
+@media (min-width: 768px) {
+    .portfolio__item-web::after {
+      line-height: 60px;
+      min-width: 27px;
+    }
+  }
 
 @media screen and (max-width: 768px) {
     .portfolio__item-web {

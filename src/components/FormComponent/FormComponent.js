@@ -16,4 +16,4 @@ function FormComponent ({name, value, onChange, minLength, maxLength, type, name
     )
 }
 
-export default FormComponent; 
+export default FormComponent;

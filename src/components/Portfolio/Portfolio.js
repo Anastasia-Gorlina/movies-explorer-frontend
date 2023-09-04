@@ -48,33 +48,27 @@ function Portfolio () {
                             </div>
                             <p className="portfolio__title-item">{text.titleItem}</p>
                             <div className="portfolio__item">
-                                <a className="portfolio__item-web">{text.item1}</a>
                                 <a 
                                     href = {text.linkStatic}
                                     target="_blank" rel="noopener noreferrer"
                                     className="portfolio__item-web"
                                 >
-                                    ↗
+                                    {text.item1}
                                 </a>
                             </div>
                             <div className="portfolio__item">
-                                <a className="portfolio__item-web">{text.item2}</a>
                                 <a 
                                     href = {text.linkAdaptive}
                                     target="_blank" rel="noopener noreferrer"
                                     className="portfolio__item-web"
-                                >
-                                    ↗
+                                >   {text.item2}
                                 </a>
                             </div>
                             <div className="portfolio__item">
-                                <a className="portfolio__item-web">{text.item3}</a>
-                                <a 
-                                    href = {text.linkSinglePageApp}
-                                    target="_blank" rel="noopener noreferrer"
-                                    className="portfolio__item-web"
-                                >
-                                    ↗
+                                <a href={text.linkSinglePageApp} 
+                                target="_blank" rel="noopener noreferrer" 
+                                className="portfolio__item-web">
+                                {text.item3}
                                 </a>
                             </div>
                             <div className = "portfolio__holder">
