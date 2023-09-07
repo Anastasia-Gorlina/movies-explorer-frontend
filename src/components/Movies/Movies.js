@@ -1,87 +1,142 @@
 import MoviesCard from '../MoviesCard/MoviesCard';
 import Preloader from '../Preloader/Preloader';
-import mainApi from "../../utils/MainApi";
+import CurrentUserContext from '../../contexts/CurrentUserContext';
 import {useState, useEffect} from 'react';
-import {useForm} from 'react-hook-form';
-import { ErrorMessage } from '@hookform/error-message';
+import {useContext} from 'react';
 
-function Movies({cards, query, shortCards, updateQuery, onSubmitSearch, updateShortMovies,
-    onCardLike, isLikedCard}) {
+function Movies(
+{onCardClick, onCardLike, onCardDelete, onBookmarkClick, isSavedCard}) {
 
-    const { register, handleSubmit, formState: { errors } } = useForm({criteriaMode: "all"});
+    const currentUser = useContext(CurrentUserContext);
 
-    const getloadStep = (width) => {
-        if (width >= 1280) {
-            return 3;
-        } else if (width= 768) {
-            return 2;
+
+    const apiURL = 'https://api.nomoreparties.co/beatfilm-movies'
+
+    let moviesCount = 5;
+    let moviesAddCount = 2;
+    
+    const onResize = () => {
+        if (window.innerWidth >= 1280) {
+            moviesCount = 12;
+            moviesAddCount =3;
+        } else if (window.innerWidth >= 768) {
+            moviesCount = 8;
+            moviesAddCount = 2;
         } else {
-            return 2;
+            moviesCount = 5;
+            moviesAddCount = 2;
         }
     }
+    window.onresize = () => {
+        setTimeout(onResize, 1000)
+    };
 
-    const getInitialCount = (width) => {
-        if (width >= 1280) {
-            return 12;
-        } else if (width= 768) {
-            return 8;
-        } else {
-            return 5;
-        }
+    onResize();
+
+    const [cards, setCards] = useState([]);
+    const [filteredCards, setFilteredCards] = useState([]);
+    const [shortCards, setShortCards] = useState(false);
+    const [query, setQuery] = useState('');
+    const [countFilms, setCountFilms] = useState(moviesCount);
+    const [addCountFilms, setAddCountFilms] = useState(moviesAddCount);
+    const [savedCards, setSavedCards] = useState([]);
+    const [isLoading, setisLoading] = useState(false);
+
+    const updateMovies = (cards) => {
+        setCards(cards);
+        localStorage.setItem('all_movies', JSON.stringify(cards));
     }
-    const [width, setWidth] = useState(window.innerWidth); //стэйт ширины экрана
-    const [visibleFilmsCount, setVisibleFilmsFilmsCount] = useState(getInitialCount(width)); //сколько сейчас отображается фильмов
-    const [isLoading, setisLoading] = useState(false); //стэйт прелоадера
 
-    //console.log('width:', width);
+    const updateFilteredMovies = (cards) => {
+        setFilteredCards(cards);
+        localStorage.setItem('all_filtered_movies', JSON.stringify(cards));
+    }
 
-    useEffect(() => {
-        let timeoutId = null;
+    const updateShortCards = (shortCards) => {
+        setisLoading(true)
+        setTimeout(() => {
+            setCountFilms (moviesCount);
+            setShortCards(shortCards);;
+            localStorage.setItem('all_shortCards', JSON.stringify(shortCards));
+            setisLoading(false)
+        }, 600)
+    }
 
-        const resizeListener = () => {
-            clearTimeout(timeoutId);
-            timeoutId = setTimeout(() => setWidth(window.innerWidth), 150);
-            //timeoutId = setTimeout
+    const updateQuery = (query) => {
+        query = query.toLowerCase();
+        setQuery(query);
+        localStorage.setItem('all_query', query);
+    }
+
+    console.log (cards);
+
+    useEffect (() => {
+        const cards = JSON.parse(localStorage.getItem('all_movies') || '[]');
+        updateMovies(cards);
+        updateFilteredMovies(
+            JSON.parse(localStorage.getItem('all_filtered_movies') || '[]')
+        );
+        updateQuery(localStorage.getItem('all_query') || '');
+        updateShortCards(
+            JSON.parse(localStorage.getItem('all_short_movies') || 'false')
+        );
+
+        if (!cards.length) {
+            fetch (apiURL, {
+                method: 'GET',
+                headers: {
+                    //'Accept': 'application/json',
+                    'Content-Type': 'aplication/json'
+                },
+            })
+            .then((res) => res.json())
+            .then((res) => {
+            updateMovies(res);
+            updateFilteredMovies([]);
+            })
         }
+    }, []);
 
-        window.addEventListener('resize', resizeListener)
-
-        return() => {
-            window.removeEventListener('resize', resizeListener)
-        };
-        
-    }, [])
-
-    function onSubmitt(evt) {
-        //evt.preventDefault();
-        onSubmitSearch(query);
+    const handleSubmit = (e) => {
+        // Запрещаем браузеру переходить по адресу формы
+        e.preventDefault();
+        setisLoading(true)
+        setTimeout(() => {
+            if (query.length){
+                const filteredCards = cards.filter (
+                    card => card.nameRU.toLowerCase().indexOf(query) >= 0,
+                    
+                );
+                updateFilteredMovies(filteredCards)
+                setisLoading(false)
+            } else {
+                updateFilteredMovies(cards)
+                setisLoading(false)
+            }
+        }, 600)
     }
 
     const addMovies = () => {
         setisLoading(true)
         setTimeout(() => {
-            setVisibleFilmsFilmsCount((prevCount)=> prevCount + getloadStep(width));
+            setCountFilms (countFilms + addCountFilms)
             setisLoading(false)
         }, 600)
     }
 
+    const searchResult = filteredCards.filter(
+        (card) => !shortCards || card.duration <= 40
+    )
+
     return (
         <main>
-            
             <div className="Movies__container">
-
-                <form className="Movies__search" onSubmit={handleSubmit(onSubmitt)} noValidate>
+                <form className="Movies__search" onSubmit={handleSubmit}>
                     <div className= "Movies__search-input">
-                        <input
-                            placeholder="Фильм"
-                            {...register("Search", {
-                                required: "Нужно вести ключевое слово",
-                            })}
-                            value ={query}
-                            type="text" 
-                            required
+                        <input 
+                            type="text" className="Movies__search-field"
+                            placeholder="Фильм" value ={query} required
                             onChange = {(event)=> updateQuery(event.target.value)} 
-                            className="Movies__search-field"
                         />
                         <div 
                             alt="" className="Movies__search-icon">
@@ -93,39 +148,29 @@ function Movies({cards, query, shortCards, updateQuery, onSubmitSearch, updateSh
                     <h2 className="Movies__separator-line"></h2>
                     <input
                         className="Movies__checkbox"
-                        type="checkbox" checked={shortCards}
-                        onChange={()=> updateShortMovies (!shortCards)}
+                        type="checkbox" checked={shortCards} 
+                        onChange={ ()=> updateShortCards (!shortCards)}
                     />
                     <h2 className="Movies__checkbox_name"> Короткометражки </h2>
                 </div>
             </div>
-            <ErrorMessage
-                errors={errors}
-                name="Search"
-                render={({ messages }) =>
-                    messages &&
-                    Object.entries(messages).map(([type, message]) => (
-                    <span className="Movies__input-error" key={type}>{message}</span>
-                ))}
-            />
             
-            <section className="Movies__elements">
-                {/*searchResult.slice(0, countFilms)*/
-                cards.slice(0, visibleFilmsCount).map ((card) => {
-                    return <MoviesCard 
-                        onCardLike = {onCardLike}
-                        isLikedCard= {isLikedCard}
-                        card={card} key={card.id || card.movieId}
-                    />
-                })}
-            </section>
-            {isLoading && <Preloader/>}
-            {visibleFilmsCount < cards.length && (
-                <button className="Movies__add-button opacity-buttons" 
-                    type="button"onClick={addMovies}>
-                        Ещё
-                </button>   
-            )}
+                <section class="Movies__elements">
+                    {searchResult.slice (0, countFilms)
+                    .map ((card) => {
+                        return <MoviesCard 
+                            onCardClick = {onCardClick} onCardLike = {onCardLike}
+                            isSavedCard= {isSavedCard} onBookmarkClick={onBookmarkClick}
+                            onCardDelete ={onCardDelete} card={card} key = {card.id}/>
+                    })}
+                </section>
+                {isLoading && <Preloader/> }
+                {countFilms < searchResult.length && (
+                    <button className="Movies__add-button opacity-buttons" 
+                        type="button"onClick={addMovies}>
+                            Ещё
+                    </button>   
+                )}
             
         </main>
     );

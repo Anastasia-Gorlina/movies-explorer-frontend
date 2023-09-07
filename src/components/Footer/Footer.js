@@ -30,7 +30,7 @@ function Footer() {
                             <li className="footer__link-list-type">
                                 <a 
                                     className="footer__link opacity"
-                                    href="https://github.com/SashaAnshukov"
+                                    href="https://github.com/Anastasia-Gorlina"
                                     target="_blank">Github
                                 </a>
                             </li>
