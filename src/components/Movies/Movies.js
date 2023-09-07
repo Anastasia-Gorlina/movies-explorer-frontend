@@ -155,7 +155,7 @@ function Movies(
                 </div>
             </div>
             
-                <section class="Movies__elements">
+                <section className="Movies__elements">
                     {searchResult.slice (0, countFilms)
                     .map ((card) => {
                         return <MoviesCard 
