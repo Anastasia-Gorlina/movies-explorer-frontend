@@ -3,7 +3,6 @@
 
 название макета - light-4
 локальная ссылка - http://localhost:3000/
-ссылка - https://anastasia.gorlina.nomoreparties.co/
 Ссылка на репозиторий с бэкендом (2-ой этап дипломной работы) - https://github.com/Anastasia-Gorlina/movies-explorer-api
 
 ## Функционал:
