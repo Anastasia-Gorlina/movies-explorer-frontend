@@ -1,0 +1,11 @@
+.FilterCheckbox__input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+  }
+
+.FilterCheckbox__input:checked+.visible-checkbox {
+    background-image: url('../../../images/checkbox-active.svg');
+}

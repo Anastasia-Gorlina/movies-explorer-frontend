@@ -1,0 +1,15 @@
+.MoviesCardList {
+  margin: 70px 70px 80px 70px;
+}
+
+@media (min-width: 500px) and (max-width: 850px) {
+  .MoviesCardList {
+    margin: 76px 30px 80px 30px;
+  }
+}
+
+@media (max-width: 321px) {
+  .MoviesCardList {
+    margin: 46px 10px 80px 10px;
+  }
+}

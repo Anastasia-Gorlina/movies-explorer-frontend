@@ -1,0 +1,20 @@
+.register__button {
+    margin-top: 37px;
+    height: 45px;
+    background: #000000;
+    border-radius: 3px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    color: #FFFFFF;
+    border: none;
+  }
+
+  @media (max-width: 499px) {
+    .register__button {
+        margin-top: 112px;
+        font-size: 12px;
+        line-height: 15px;
+      }
+  }

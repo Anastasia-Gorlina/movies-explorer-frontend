@@ -1,0 +1,8 @@
+.Header__account {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+  }

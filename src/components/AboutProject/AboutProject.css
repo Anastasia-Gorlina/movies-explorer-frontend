@@ -1,21 +1,17 @@
-.AboutProject {
-    max-width: 1140px;
-    display: flex;
-    flex-direction: row;
-    margin-left: auto;
-    margin-right: auto;
+.about-project {
+  padding: 113px 70px;
+  max-width: 1280px;
+  margin: auto;
 }
 
-@media screen and (max-width: 768px) {
-    .AboutProject{
-        max-width: 668px;
-    }
+@media (min-width: 500px) and (max-width: 850px) {
+  .about-project {
+    padding: 90px 50px;
+  }
 }
 
-@media screen and (max-width: 321px) {
-    .AboutProject{
-        max-width: 284px;
-        flex-direction: column;
-        margin: 0;
-    }
+@media (max-width: 321px) {
+  .about-project {
+    padding: 73px 18px;
+  }
 }

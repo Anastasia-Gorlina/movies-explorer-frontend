@@ -1,0 +1,7 @@
+
+.MoviesCard__button_save {
+    background-image: url('../../../../images/like-button-active.svg');
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border: none;
+  }

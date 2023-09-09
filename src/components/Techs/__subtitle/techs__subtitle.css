@@ -1,0 +1,27 @@
+.techs__subtitle {
+    font-weight: 400;
+    margin: 0;
+    font-style: normal;
+    font-size: 50px;
+    line-height: 58px;
+    text-align: center;
+    letter-spacing: -0.04em;
+    color: #000000;
+    margin-bottom: 25px;
+    width: 100%;
+    max-width: 1140px;
+  }
+
+  @media (min-width: 500px) and (max-width: 850px) {
+    .techs__subtitle {
+      margin-bottom: 22px;
+    }
+  }
+  
+  @media (max-width: 321px) {
+    .techs__subtitle {
+      margin-bottom: 24px;
+      font-size: 30px;
+      line-height: 36px;
+    }
+  }

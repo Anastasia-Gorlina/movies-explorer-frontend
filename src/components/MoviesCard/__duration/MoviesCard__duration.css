@@ -1,0 +1,23 @@
+.MoviesCard__duration {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 18px;
+    color: #A0A0A0;
+    margin: 17px 18px 14px 18px;
+    padding: 0;
+  }
+
+@media (min-width: 500px) and (max-width: 850px) {
+.MoviesCard__duration {
+    font-size: 11px;
+    line-height: 13px;
+  }
+}
+
+@media (max-width: 499px) {
+    .MoviesCard__duration {
+      font-size: 10px;
+      line-height: 12px;
+    }
+}

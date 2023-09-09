@@ -1,0 +1,21 @@
+.about-project__header {
+    font-weight: 400;
+    margin: 0;
+    padding-bottom: 23px;
+    font-size: 22px;
+    line-height: 27px;
+    text-align: left;
+    margin-bottom: 70px;
+    border-bottom: 1px solid #000000;
+    display: block;
+    letter-spacing: -0.04em;
+  }
+
+@media (max-width: 499px) {
+.about-project__header {
+    font-size: 18px;
+    line-height: 22px;
+    padding-bottom: 27px;
+    margin-bottom: 61px;
+}
+}

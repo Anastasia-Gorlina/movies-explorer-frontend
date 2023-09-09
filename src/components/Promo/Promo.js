@@ -1,12 +1,9 @@
-import React from 'react';
-
-function Promo({children}) {
-    return (
-        <section className="Promo">
-            <h1 className="Promo__title">Учебный проект студента факультета Веб-разработки.</h1>
-            {children}
-        </section>
-    );
+function Promo() {
+  return (
+    <section className="promo">
+      <h1 className="promo__header">Учебный проект студента факультета Веб-разработки.</h1>
+    </section>
+  )
 }
 
 export default Promo;

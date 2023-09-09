@@ -1,7 +1,14 @@
-.NavTab__link { 
-    display: flex; 
-    /*width: 270px;*/ 
-    height: 38px; 
-    z-index: 0; 
+.NavTab__link {
+    text-decoration: underline;
     color: white;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 16px;
+  }
+
+@media (max-width: 321px) {
+    .NavTab__link {
+        font-size: 11px;
+        line-height: 16px;
+    }
 }

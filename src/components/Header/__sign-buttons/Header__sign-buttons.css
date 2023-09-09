@@ -1,0 +1,11 @@
+.Header__sign-buttons {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+  }
+
+  @media (max-width: 499px) {
+    .Header__sign-buttons {
+        gap: 15px;
+      }
+  }

@@ -1,21 +1,17 @@
 .portfolio {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 106px;
+  max-width: 1280px;
+  padding: 0 70px 125px 70px;
+  margin: auto;
 }
 
-@media screen and (max-width: 768px) {
-    .portfolio {
-        margin-bottom: 71px;
-    }
+@media (min-width: 500px) and (max-width: 850px) {
+  .portfolio {
+    padding: 0 50px 68px 50px;
+  }
 }
 
-@media screen and (max-width: 470px) {
-    .portfolio {
-        margin-bottom: 51px;
-    }
+@media (max-width: 499px) {
+  .portfolio {
+    padding: 0 14px 47px 14px;
+  }
 }

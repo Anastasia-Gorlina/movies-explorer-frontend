@@ -1,0 +1,19 @@
+.MoviesCardList__more-button {
+    display: block;
+    border: none;
+    border: 1px solid #E8E8E8;
+    width: 100%;
+    max-width: 320px;
+    background-color: transparent;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    margin: 58px auto 160px;
+    height: 36px;
+  }
+
+@media (max-width: 321px) {  
+    .MoviesCardList__more-button {
+        width: 240px;
+    }
+}

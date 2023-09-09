@@ -1,0 +1,11 @@
+.register__container {
+    width: 396px;
+  }
+
+  @media (max-width: 321px) {
+    .register__container {
+      width: 260px;
+      display: flex;
+      flex-direction: column;
+  }
+}

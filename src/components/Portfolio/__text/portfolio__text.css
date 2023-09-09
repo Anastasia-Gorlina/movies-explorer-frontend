@@ -1,0 +1,14 @@
+.portfolio__text {
+    font-size: 30px;
+    line-height: 50px;
+    letter-spacing: -0.04em;
+    padding: 20px 0;
+    margin: 0;
+}
+
+@media (max-width: 499px) {
+    .portfolio__text {
+        font-size: 18px;
+        line-height: 28px;
+    }
+}

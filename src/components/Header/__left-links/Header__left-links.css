@@ -1,0 +1,18 @@
+.Header__left-links {
+    display: flex;
+    align-items: center;
+    gap: 721px;
+  }
+
+  @media (min-width: 500px) and (max-width: 768px) {
+    .Header {
+      gap: 44px;
+    }
+  }
+  
+  @media (max-width: 321px) {
+    .Header {
+      gap: 44px;
+    }
+  }
+  

@@ -1,0 +1,6 @@
+.MoviesCard__desc {
+    margin: 10px 18px 17px 18px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }

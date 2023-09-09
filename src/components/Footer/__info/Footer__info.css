@@ -1,0 +1,11 @@
+.Footer__info {
+    border-bottom: 1px solid #E8E8E8;
+    margin-top: 79px;
+    margin-bottom: 20px;
+  }
+
+@media (max-width: 499px) {
+    .Footer__info {
+        margin-bottom: 30px;
+    }
+  }

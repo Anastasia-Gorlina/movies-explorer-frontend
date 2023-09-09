@@ -1,49 +1,20 @@
-import {useState} from 'react';
-import {Routes, Route} from 'react-router-dom';
+function MoviesCard({ movie, isOpenSavedMovies }) {
 
-function MoviesCard({handleClick, onBookmarkClick, isSavedCard, card}) {
+	return (
+		<div className="MoviesCard">
+			<a className="MoviesCard__link link" href={movie.trailerLink} target="_blank" rel="noreferrer">
+				<img src={movie.image} className="MoviesCard__image" alt={`Постер фильма ${movie.nameRu}`} />
+			</a>
+			<div className="MoviesCard__info">
+				<div className="MoviesCard__des">
+					<h3 className="MoviesCard__title">{movie.nameRU}</h3>
+					
+				</div>
+				<p className="MoviesCard__duration">{movie.duration}</p>
+			</div>
 
-    const cardLikeButtonClassName = (
-        `MoviesCard__mesto-like`
-    );
-
-    function durationTime(duration) {
-        const hour = Math.round(duration/60);
-        const min = duration-60;
-        return `${hour}ч ${min}м`;
-    }
-
-    function handleBookmarkClick(evt) {
-        evt.preventDefault();
-        evt.target.classList.toggle('MoviesCard__mesto-like_active');
-        //onBookmarkClick(card, !isSaved);
-    }
-
-
-    return (
-                <div className="rectangle-item-template">
-                    <article className="MoviesCard">
-                        <div className="MoviesCard__info">
-                            <div>
-                                <h2 className="MoviesCard__text">{card.nameRU}</h2>
-                                <span className="MoviesCard__duration">{durationTime(card.duration)}</span>
-                            </div>
-                                <button
-                                    onClick={handleBookmarkClick}
-                                    className = {cardLikeButtonClassName}
-                                    type ="button" aria-label="add-favorite" 
-                                >
-                                </button>
-                        </div>
-                        <img 
-                            className="MoviesCard__image" onClick={handleClick}
-                            src={`https://api.nomoreparties.co${card.image.url}`} alt={card.nameRU}
-                        />
-                        
-                        
-                    </article>
-                </div>
-    );
+		</div>
+	);
 }
 
 export default MoviesCard;

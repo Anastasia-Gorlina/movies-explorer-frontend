@@ -1,0 +1,4 @@
+.BurgerNavigation {
+  display: flex;
+  flex-direction: column;
+}

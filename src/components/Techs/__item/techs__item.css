@@ -1,0 +1,33 @@
+.techs__item {
+    background: #E8E8E8;
+    border-radius: 10px;
+    font-size: 14px;
+    color: #000000;
+    height: 60px;
+    width: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+@media (min-width: 500px) and (max-width: 850px) {
+    .techs__item {
+        height: 57px;
+        width: 84px;
+        font-size: 12px;
+        line-height: 15px;
+        text-align: center;
+        letter-spacing: -0.04em;
+    }
+}
+
+@media (max-width: 321px) {
+    .techs__item {
+        height: 57px;
+        width: 84px;
+        font-size: 12px;
+        line-height: 15px;
+        text-align: center;
+        letter-spacing: -0.04em;
+    }
+}

@@ -1,0 +1,15 @@
+.about-project__caption {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    color: #A0A0A0;
+  }
+  
+@media (max-width: 499px) {
+.about-project__caption {
+    font-size: 11px;
+    line-height: 13px;
+}
+}

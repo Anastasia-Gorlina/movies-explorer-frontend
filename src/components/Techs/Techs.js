@@ -1,73 +1,20 @@
-import React from 'react';
-import MainStack from '../MainStack/MainStack';
-import NavIcon from '../NavIcon/NavIcon';
-
-function Techs () {
-
-    const titleIcon = {
-        id1: 'HTML',
-        id2: 'CSS',
-        id3: 'JS',
-        id4: 'React',
-        id5: 'Git',
-        id6: 'Express.js',
-        id7: 'mongoDB'
-    }
-
-    return (
-        <div className="Techs">
-            <MainStack stackName = {'Технологии'}>
-                <h1 className = "Techs__title">7 технологий</h1>
-                <p className = "Techs__description">На курсе веб-разработки мы освоили технологии, которые применили в дипломном проекте.</p>
-                <section className = {'Techs__elements'}>
-                    <NavIcon 
-                        to={''}
-                        titleIcon = {titleIcon.id1} 
-                        iconStyle = {'Techs__icon'} textStyle = {'Techs__iconText'}
-                        navTabStyle = {'Techs__navTab'} 
-                    />
-                    <NavIcon
-                        to={''}
-                        titleIcon = {titleIcon.id2} 
-                        iconStyle = {'Techs__icon'} textStyle = {'Techs__iconText'}
-                        navTabStyle = {'Techs__navTab'} 
-                    />
-                    <NavIcon
-                        to={''}  
-                        titleIcon = {titleIcon.id3} 
-                        iconStyle = {'Techs__icon'} textStyle = {'Techs__iconText'}
-                        navTabStyle = {'Techs__navTab'} 
-                    />
-                    <NavIcon 
-                        to={''}
-                        titleIcon = {titleIcon.id4} 
-                        iconStyle = {'Techs__icon'} textStyle = {'Techs__iconText'}
-                        navTabStyle = {'Techs__navTab'}
-
-                    />
-                    <NavIcon 
-                        to={''} 
-                        titleIcon = {titleIcon.id5} 
-                        iconStyle = {'Techs__icon'} textStyle = {'Techs__iconText'}
-                        navTabStyle = {'Techs__navTab'} 
-                    />
-                    <NavIcon 
-                        to={''} 
-                        titleIcon = {titleIcon.id6} 
-                        iconStyle = {'Techs__icon'} textStyle = {'Techs__iconText'}
-                        navTabStyle = {'Techs__navTab'} 
-                    />
-                    <NavIcon 
-                        to={''} 
-                        titleIcon = {titleIcon.id7} 
-                        iconStyle = {'Techs__icon'} textStyle = {'Techs__iconText'}
-                        navTabStyle = {'Techs__navTab'} 
-                    />      
-                </section>
-
-            </MainStack>
-        </div>
-    );
+function Techs() {
+  return (
+    <section className="techs" id="techs">
+      <h2 className="techs__title">Технологии</h2>
+            <h2 className="techs__subtitle">7 технологий</h2>
+            <p className="techs__paragraph">На курсе веб-разработки мы освоили технологии, которые применили в дипломном проекте.</p>
+            <ul className="techs__list">
+                <li className="techs__item">HTML</li>
+                <li className="techs__item">CSS</li>
+                <li className="techs__item">JS</li>
+                <li className="techs__item">React</li>
+                <li className="techs__item">Git</li>
+                <li className="techs__item">Express.js</li>
+                <li className="techs__item">MongoDB</li>
+            </ul>
+        </section>
+  )
 }
 
 export default Techs;

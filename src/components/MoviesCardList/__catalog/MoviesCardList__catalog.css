@@ -1,0 +1,24 @@
+.MoviesCardList__catalog {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 22px;
+    row-gap: 34px;
+    justify-content: center;
+    margin: auto;
+    max-width: 1280px;
+  }
+
+@media (min-width: 500px) and (max-width: 850px) {  
+.MoviesCardList__catalog {
+    gap: 27px;
+}
+}
+
+@media (max-width: 321px) {
+.MoviesCardList__catalog {
+    gap: 12px;
+}
+}

@@ -1,55 +1,18 @@
-import { useLocation } from "react-router-dom";
 function Footer() {
+  return (
+    <footer className="Footer">
+      <div className="Footer__info">
+        <p className="Footer__text">Учебный проект Яндекс.Практикум х BeatFilm.</p>
+      </div>
+      <div className="Footer__line">
+        <p className="Footer__year">&copy; 2023</p>
+        <div className="Footer__links">
+          <a href="https://practicum.yandex.ru/" target="_blank" rel="noreferrer" className="Footer__link link">Яндекс.Практикум</a>
+          <a href="https://github.com/Anastasia-Gorlina" target="_blank" rel="noreferrer" className="Footer__link link">Github</a>
+        </div>
+      </div>
 
-    const {pathname} = useLocation();
-
-    return (
-        <>
-        { 
-            pathname !== "/signup" 
-            &&
-            pathname !== "/signin"
-            &&
-            pathname !== "/404"
-            &&
-            pathname !== "/profile"
-            ?
-            (<div className="App__container">
-                <p className="footer__description">Учебный проект Яндекс.Практикум х BeatFilm.</p>
-                <div className="footer">
-                    <p className="footer__copyright">&copy; 2022</p>
-                    <nav className="footer__links">
-                        <ul className="footer__links-list">
-                            <li className="footer__link-list-type">
-                                <a 
-                                    className="footer__link opacity"
-                                    href="https://practicum.yandex.ru/profile/web/"
-                                    target="_blank">Яндекс.Практикум
-                                </a>
-                            </li>
-                            <li className="footer__link-list-type">
-                                <a 
-                                    className="footer__link opacity"
-                                    href="https://github.com/Anastasia-Gorlina"
-                                    target="_blank">Github
-                                </a>
-                            </li>
-                            <li className="footer__link-list-type">
-                                <a className="footer__link opacity"
-                                href="https://www.facebook.com"
-                                target="_blank">Facebook
-                                </a>
-                            </li>
-                            <a name="top"></a>
-                        </ul>
-                    </nav>
-                </div>
-            </div>)
-            :
-            null
-        }
-        </>
-    );
+    </footer>)
 }
 
 export default Footer;

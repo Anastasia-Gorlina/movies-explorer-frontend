@@ -1,0 +1,17 @@
+.MoviesCardList__item {
+    display: flex;
+    flex-direction: column;
+    width: 364px;
+  }
+
+@media (min-width: 500px) and (max-width: 850px) {
+  .MoviesCardList__item {
+    width: 339px;
+  }
+}
+
+@media (max-width: 499px) {
+  .MoviesCardList__item {
+    width: 300px;
+  }
+}

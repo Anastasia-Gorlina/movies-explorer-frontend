@@ -1,0 +1,13 @@
+.menu__container {
+    width: 520px;
+    background: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+@media screen and (max-width: 767px) {
+    .menu__container {
+      width: 100%;
+    }
+}

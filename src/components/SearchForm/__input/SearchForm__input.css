@@ -1,0 +1,18 @@
+.SearchForm__input {
+    background: #F9F9F9;
+    border-radius: 20px;
+    height: 72px;
+    font-size: 14px;
+    line-height: 18px;
+    border: none;
+    width: 99%;
+    padding-left: 22px;
+  }
+
+  @media (max-width: 321px) {
+    .SearchForm__input {
+      width: 96%;
+      font-size: 11px;
+      line-height: 17px;
+    }
+  }

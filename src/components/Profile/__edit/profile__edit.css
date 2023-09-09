@@ -1,0 +1,12 @@
+.profile__edit {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #000000;
+    margin: 0;
+    padding: 0;
+  }

@@ -1,8 +1,7 @@
 .portfolio__item {
-    display: flex;
-    justify-content: space-between;
-    grid-column-start: 1;
-    grid-column-end: 3;
-    border-bottom: solid 1px #E8E8E8;
-    position: relative;
+    border-bottom: 1px solid #E8E8E8;
+}
+
+.portfolio__item:last-child {
+    border-bottom: none;
 }

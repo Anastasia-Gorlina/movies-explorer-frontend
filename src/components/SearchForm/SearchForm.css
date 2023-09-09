@@ -1,0 +1,23 @@
+.SearchForm {
+  margin: 78px 70px 80px 70px;
+  border-bottom: 1px solid #E8E8E8;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  display: flex;
+  gap: 41px;
+  justify-content: space-between;
+  position: relative;
+}
+
+@media (min-width: 500px) and (max-width: 850px) {
+  .SearchForm {
+    margin: 97px 30px 0 30px;
+  }
+}
+
+@media (max-width: 499px) {
+  .SearchForm {
+    margin: 92px 17px 0 17px;
+  }
+}

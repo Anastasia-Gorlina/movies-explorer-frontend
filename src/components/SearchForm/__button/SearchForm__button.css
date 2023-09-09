@@ -1,0 +1,14 @@
+.SearchForm__button {
+    width: 59px;
+    height: 34px;
+    background-image: url('../../../images/find-button.svg');
+    border: none;
+    position: absolute;
+    right: 2px;
+    top: 20px;
+    color: #FFFFFF;
+    font-size: 11px;
+    line-height: 18px;
+    margin: 0 auto;
+  display: block;
+  }

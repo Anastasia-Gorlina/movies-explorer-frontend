@@ -1,0 +1,9 @@
+.FilterCheckbox__visible-checkbox {
+    display: inline-block;
+    vertical-align: middle;
+    height: 20px;
+    width: 36px;
+    border-radius: 20px;
+    background-image: url('../../../images/checkbox-active.svg');
+    background-size: cover;
+}

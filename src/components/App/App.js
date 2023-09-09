@@ -1,64 +1,56 @@
-import './App.css';
-import {Routes, Route, useNavigate, Navigate} from 'react-router-dom';
-import ProtectedRoute from '../ProtectedRoute/ProtectedRoute';
-import Header from '../Header/Header';
-import Footer from '../Footer/Footer';
-import Main from '../Main/Main';
-import Login from '../Login/Login';
-import Register from '../Register/Register';
-import Profile from '../Profile/Profile';
-import NotFound from '../NotFound/NotFound';
-import Movies from '../Movies/Movies';
-import NavBar from '../NavBar/NavBar';
-import mainApi from "../../utils/MainApi";
-import {useState, useEffect} from 'react';
+import Header from '../Header/Header'
+import Main from '../Main/Main'
+import Footer from '../Footer/Footer'
+import Movies from '../Movies/Movies'
+import SavedMovies from '../SavedMovies/SavedMovies'
+import Profile from '../Profile/Profile'
+import Register from '../Register/Register'
+import Login from '../Login/Login'
+import NotFoundPage from '../NotFoundPage/NotFoundPage'
+import { Routes, Route, useLocation } from 'react-router-dom'
 
 function App() {
-  const navigate = useNavigate();
+  const path = useLocation().pathname;
 
-  // стэйт пользователя — вошёл он в систему или нет
-  const [loggedIn, setLoggedIn] = useState(false);
-  const [savedCards, setsavedCards] = useState([]);
-
-
-  function registration() {
-    navigate('/signin');
-  }
-
-  function authorization() {
-    setLoggedIn(true);
-    navigate('/movies');
-
-  }
-
-  function signOut() {
-    navigate('/');
-    setLoggedIn (false);
-  }
-
+  let isLoggedIn = path !== '/sign-up' && path !== '/sign-in'
+  const needShowFooter = isLoggedIn && path !== '/profile'
   return (
-    <div className="App">
-      
-      <Header>
-        <NavBar loggedIn={loggedIn} />
-      </Header>
-      
-      <Routes >
-        <Route exact path='/' element = {<Main />} />
-        <Route exact path='/signup' element = {<Register registration = {registration}/>} />
-        <Route exact path='/signin' element = {<Login authorization = {authorization} />} />
-        <Route exact path='/profile' element = {<Profile signOut={signOut}/>} />
-        <Route exact path='/movies' element = {<Movies movies={Movies}/>} />
-        <Route exact path='/saved-movies' element = {<Movies />} />
-        <Route exact path='/404' element = {<NotFound />} />
-
-        <Route path="/"
-          element = {loggedIn ? <Navigate to="/" /> : <Navigate to="/signin" />}
-        />
-
-      </Routes>
-      
-      <Footer />
+    <div className="page">
+      {isLoggedIn && <Header />}
+      <main>
+        <Routes>
+          <Route
+            path="/sign-up"
+            element={<Register />}
+          />
+          <Route
+            path="/sign-in"
+            element={<Login />}
+          />
+          <Route
+            path='/'
+            element={
+              <Main />
+            } />
+          <Route
+            path="/movies"
+            element={<Movies />}
+          />
+          <Route
+            path="/saved-movies"
+            element={<SavedMovies />}
+          />
+          <Route
+            path="/profile"
+            element={<Profile />}
+          />
+          <Route
+            path="/*"
+            element={<NotFoundPage />}
+          />
+        </Routes>
+      </main>
+      {needShowFooter && <Footer />}
     </div>
   );
 }

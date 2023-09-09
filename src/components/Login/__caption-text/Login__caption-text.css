@@ -1,0 +1,13 @@
+.Login__caption-text {
+    font-size: 14px;
+    line-height: 17px;
+    color: #A0A0A0;
+    margin: 0 6px 0 0;
+  }
+
+  @media (max-width: 499px) { 
+    .Login__caption-text {
+      font-size: 12px;
+      line-height: 15px;
+    }
+   }

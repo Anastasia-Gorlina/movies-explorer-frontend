@@ -1,0 +1,9 @@
+.Login__error-validation {
+    font-size: 10px;
+    line-height: 12px;
+    color: #FF4062;
+    visibility: hidden;
+    position: absolute;
+    top: calc(100% + 5px);
+    left: 0;
+  }

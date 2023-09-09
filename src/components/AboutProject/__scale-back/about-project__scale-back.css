@@ -1,0 +1,11 @@
+.about-project__scale-back {
+    display: flex;
+    flex-direction: column;
+    width: calc(100% / 5);
+  }
+
+@media (max-width: 499px) {
+.about-project__scale-back {
+    width: calc(100% / 3);
+}
+}
