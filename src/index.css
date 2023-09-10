@@ -104,7 +104,7 @@
 @import url(./components/Register/__input/register__input.css);
 @import url(./components/Register/__logo/register__logo.css);
 
-@import url(./components/Profile/profile.css);
+@import url(./components/Profile/Profile.css);
 @import url(./components/Profile/__button-save/profile__button-save.css);
 @import url(./components/Profile/__button-save/_active/profile__button-save_active.css);
 @import url(./components/Profile/__button-save/_error/profile__button-save_error.css);
