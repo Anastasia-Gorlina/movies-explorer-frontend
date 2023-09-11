@@ -4,6 +4,10 @@
     height: 20px;
     width: 36px;
     border-radius: 20px;
-    background-image: url('../../../images/checkbox-active.svg');
+    background-image: url('../../../images/checkbox-unactive.svg');
     background-size: cover;
 }
+
+.FilterCheckbox__input:checked+.visible-checkbox {
+    background-image: url('../../../images/checkbox-active.svg');
+  }

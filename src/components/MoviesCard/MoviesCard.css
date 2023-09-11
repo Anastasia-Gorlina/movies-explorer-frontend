@@ -1,6 +1,7 @@
 .MoviesCard {
   display: flex;
   flex-direction: column;
-  background: #FDFDFD;
+  background: #FFFFFF;
   border-radius: 6px;
+  position: relative;
 }

@@ -11,7 +11,7 @@
   }
 }
 
-@media (max-width: 321px) {
+@media (max-width: 499px) {
   .MoviesCard__image {
     height: 168px;
   }

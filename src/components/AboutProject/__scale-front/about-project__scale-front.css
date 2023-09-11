@@ -4,7 +4,7 @@
     width: calc((100% / 5)*4);
   }
 
-@media (max-width: 321px) {
+@media (max-width: 499px) {
 .about-project__scale-front {
     width: calc((100% / 3)*2);
 }

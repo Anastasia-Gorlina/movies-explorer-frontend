@@ -20,7 +20,7 @@
     }
 }
 
-@media (max-width: 321px) {
+@media (max-width: 499px) {
     .techs__paragraph {
         font-size: 11px;
         line-height: 16px;

@@ -10,7 +10,7 @@
     align-items: center;
   }
 
-@media (max-width: 321px) {
+@media (max-width: 499px) {
 .about-project__ceil {
     font-size: 11px;
     line-height: 13px;

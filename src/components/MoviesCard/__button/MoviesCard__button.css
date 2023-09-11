@@ -1,8 +1,14 @@
-/*.MoviesCard__button {
-    background-image: url('../../../images/like-button-active.svg');
+.MoviesCard__button {
+    background-image: url('../../../images/save.svg');
     background-repeat: no-repeat;
-    background-color: transparent;
-    width: 21px;
+    width: 72px;
     height: 21px;
     border: none;
-  }*/
+    display: flex;
+    position: absolute;
+    top: 14px;
+    border-radius: 20px;
+    right: 14px;
+    justify-content: center;
+    align-items: center;
+  }

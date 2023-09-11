@@ -15,7 +15,7 @@
   }
 }
 
-@media (max-width: 321px) {
+@media (max-width: 499px) {
   .techs {
     padding: 56px 18px;
     background-color: white;

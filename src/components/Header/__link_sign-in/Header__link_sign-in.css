@@ -6,7 +6,7 @@
     color: white;
   }
   
-  @media (max-width: 321px) {
+  @media (max-width: 499px) {
     .Header__link_sign-in {
         padding: 5px 12px;
       }

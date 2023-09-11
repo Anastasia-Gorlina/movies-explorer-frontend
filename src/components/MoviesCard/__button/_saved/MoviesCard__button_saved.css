@@ -1,0 +1,14 @@
+.MoviesCard__button_saved {
+  background-image: url('../../../../images/save-button.svg');
+  background-repeat: no-repeat;
+  background-color: #FF4062;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: none;
+  width: 21px;
+  height: 21px;
+  border-radius: 50%;
+  background-size: 50%; 
+  background-position: center center; 
+  }

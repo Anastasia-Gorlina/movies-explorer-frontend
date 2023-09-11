@@ -34,11 +34,11 @@ function MoviesCardList({isOpenSavedMovies}) {
   const movies = [movie, movie, movieSaved, movie, movie, movieSaved, movie, movieSaved, movie, movie, movie, movie,]
 
   return (
-    <div className="MoviesCard">
+    <div className="MoviesCardList">
       <ul className="MoviesCardList__catalog">
         {movies
           .map((item, idx) => (
-            <li className="MoviesCardList__item" key={idx}>
+            <li className="MoviesCardList__catalog_item" key={idx}>
               <MoviesCard movie={item} isOpenSavedMovies={isOpenSavedMovies}/>
             </li>
           ))

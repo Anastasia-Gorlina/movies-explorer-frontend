@@ -57,8 +57,16 @@
 
 @import url(./components/SearchForm/SearchForm.css);
 @import url(./components/SearchForm/__button/SearchForm__button.css);
+@import url(./components/SearchForm/__container/SearchForm__container.css);
+@import url(./components/SearchForm/__field/SearchForm__field.css);
+@import url(./components/SearchForm/__form/SearchForm__form.css);
+@import url(./components/SearchForm/__image/SearchForm__image.css);
+@import url(./components/SearchForm/__initiate/SearchForm__initiate.css);
 @import url(./components/SearchForm/__input/SearchForm__input.css);
-@import url(./components/SearchForm/__find/SearchForm__find.css);
+@import url(./components/SearchForm/__shortfilms/SearchForm__shortfilms.css);
+@import url(./components/SearchForm/__switch/SearchForm__switch.css);
+@import url(./components/SearchForm/__toggle/SearchForm__toggle.css);
+
 
 @import url(./components/NotFoundPage/NotFoundPage.css);
 @import url(./components/NotFoundPage/__go-back/NotFoundPage__go-back.css);
@@ -130,9 +138,9 @@
 
 @import url(./components/MoviesCard/MoviesCard.css);
 @import url(./components/MoviesCard/__button/MoviesCard__button.css);
-@import url(./components/MoviesCard/__button/_deleted/MoviesCard__button_delete.css);
-@import url(./components/MoviesCard/__button/_save/MoviesCard__button_save.css);
-@import url(./components/MoviesCard/__desc/MoviesCard__des.css);
+@import url(./components/MoviesCard/__button/_deleted/MoviesCard__button_deleted.css);
+@import url(./components/MoviesCard/__button/_saved/MoviesCard__button_saved.css);
+@import url(./components/MoviesCard/__des/MoviesCard__des.css);
 @import url(./components/MoviesCard/__duration/MoviesCard__duration.css);
 @import url(./components/MoviesCard/__image/MoviesCard__image.css);
 @import url(./components/MoviesCard/__info/MoviesCard__info.css);
@@ -141,7 +149,7 @@
 
 @import url(./components/MoviesCardList/MoviesCardList.css);
 @import url(./components/MoviesCardList/__catalog/MoviesCardList__catalog.css);
-@import url(./components/MoviesCardList/__item/MoviesCardList__item.css);
+@import url(./components/MoviesCardList/__catalog/_item/MoviesCardList__catalog_item.css);
 @import url(./components/MoviesCardList/__more-button/MoviesCardList__more-button.css);
 
 @import url(./components/AboutProject/AboutProject.css);

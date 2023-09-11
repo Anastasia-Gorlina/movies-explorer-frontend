@@ -8,13 +8,13 @@
 }
 
 
-@media (max-width: 769px) {
+@media (min-width: 500px) and (max-width: 850px) {
   .AboutMe {
     padding: 108px 50px 91px 50px;
   }
 }
 
-@media (max-width: 321px) {
+@media (max-width: 499px) {
   .AboutMe {
     padding: 72px 14px;
   }

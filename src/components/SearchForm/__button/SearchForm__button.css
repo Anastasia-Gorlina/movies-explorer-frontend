@@ -1,14 +1,35 @@
 .SearchForm__button {
-    width: 59px;
     height: 34px;
-    background-image: url('../../../images/find-button.svg');
+    width: 59px;
+    background-repeat: no-repeat;
     border: none;
-    position: absolute;
-    right: 2px;
-    top: 20px;
-    color: #FFFFFF;
+    background-color: transparent;
+    padding: 0;
+    margin: 0 0 0 6px;
+    background-color: black;
+    border: none;
+    border-radius: 48px;
+    color: white;
     font-size: 11px;
-    line-height: 18px;
-    margin: 0 auto;
-  display: block;
+    font-weight: 500;
+  }
+  
+  .SearchForm__button:hover {
+    opacity: .6;
+    cursor: pointer;
+  }
+
+  @media screen and (max-width: 768px) {
+    .SearchForm__button {
+        height: 34px;
+        width: 59px;
+        padding: 0;
+        margin: 0 0 0 21px;
+      }
+  }
+
+  @media screen and (max-width: 450px) {
+    .SearchForm__button {
+        margin: 0 20px 0 0;
+      }
   }

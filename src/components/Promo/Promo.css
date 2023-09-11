@@ -14,7 +14,7 @@
   }
 }
 
-@media (max-width: 321px) {
+@media (max-width: 499px) {
   .promo {
     height: 570px;
   }

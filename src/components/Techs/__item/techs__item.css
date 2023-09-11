@@ -21,7 +21,7 @@
     }
 }
 
-@media (max-width: 321px) {
+@media (max-width: 499px) {
     .techs__item {
         height: 57px;
         width: 84px;

@@ -10,7 +10,7 @@
     align-self: stretch;
   }
   
-  @media (max-width: 321px) {
+  @media (max-width: 499px) {
     .AboutMe__header {
       font-size: 18px;
       line-height: 22px;

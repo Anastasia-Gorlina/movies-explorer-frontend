@@ -1,7 +1,6 @@
 .MoviesCard__info {
     display: flex;
     position: relative;
-    gap: 34px;
   }
 
 .MoviesCard__info:hover .card__button_deleted {

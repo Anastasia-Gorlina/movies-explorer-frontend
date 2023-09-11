@@ -10,7 +10,7 @@
   }
 }
 
-@media (max-width: 321px) {
+@media (max-width: 499px) {
   .about-project {
     padding: 73px 18px;
   }

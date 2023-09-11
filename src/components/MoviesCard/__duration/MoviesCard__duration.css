@@ -4,7 +4,7 @@
     font-size: 13px;
     line-height: 18px;
     color: #A0A0A0;
-    margin: 17px 18px 14px 18px;
+    margin: 16px 18px 14px 18px;
     padding: 0;
   }
 
@@ -19,5 +19,6 @@
     .MoviesCard__duration {
       font-size: 10px;
       line-height: 12px;
+      margin: 16px 0px 14px 0px;
     }
 }

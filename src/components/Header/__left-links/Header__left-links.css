@@ -3,16 +3,15 @@
     align-items: center;
     gap: 721px;
   }
+  
+  @media (max-width: 1200px) {
+    .Header__left-links {
+      gap: 230px;
+    }
+  }
 
-  @media (min-width: 500px) and (max-width: 768px) {
-    .Header {
-      gap: 44px;
+  @media (max-width: 560px) {
+    .Header__left-links {
+      gap: 0px;
     }
   }
-  
-  @media (max-width: 321px) {
-    .Header {
-      gap: 44px;
-    }
-  }
-  

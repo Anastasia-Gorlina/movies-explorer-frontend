@@ -20,7 +20,7 @@
     }
   }
   
-  @media (max-width: 321px) {
+  @media (max-width: 499px) {
     .AboutMe__image {
       width: 292px;
       height: 352px;

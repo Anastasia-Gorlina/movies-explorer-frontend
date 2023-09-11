@@ -22,7 +22,7 @@
     }
   }
   
-  @media (max-width: 321px) {
+  @media (max-width: 499px) {
     .AboutMe__desc {
       font-size: 11px;
       line-height: 16px;

@@ -8,7 +8,7 @@
     color: #A0A0A0;
   }
 
-@media (max-width: 321px) {
+@media (max-width: 499px) {
   .Footer__text {
       font-size: 12px;
       line-height: 15px;
