@@ -37,7 +37,7 @@
 @import url(./components/FilterCheckbox/__text/FilterCheckbox__text.css);
 @import url(./components/FilterCheckbox/__visible-checkbox/FilterCheckbox__visible-checkbox.css);
 
-@import url(./components/Footer/footer.css);
+@import url(./components/Footer/Footer.css);
 @import url(./components/Footer/__info/Footer__info.css);
 @import url(./components/Footer/__line/Footer__line.css);
 @import url(./components/Footer/__link/footer__link.css);
@@ -51,7 +51,7 @@
 @import url(./components/Header/__left-links/Header__left-links.css);
 @import url(./components/Header/__link/Header__link.css);
 @import url(./components/Header/__link_sign-in/Header__link_sign-in.css);
-@import url(./components/Header/__logo/Header__logo.css);
+@import url(./components/Header/__logo/header__logo.css);
 @import url(./components/Header/__movies-links/Header__movies-links.css);
 @import url(./components/Header/__sign-buttons/Header__sign-buttons.css);
 
@@ -113,7 +113,7 @@
 @import url(./components/Register/__input/register__input.css);
 @import url(./components/Register/__logo/register__logo.css);
 
-@import url(./components/Profile/profile.css);
+@import url(./components/Profile/Profile.css);
 @import url(./components/Profile/__button-save/profile__button-save.css);
 @import url(./components/Profile/__button-save/_active/profile__button-save_active.css);
 @import url(./components/Profile/__button-save/_error/profile__button-save_error.css);
@@ -132,7 +132,7 @@
 @import url(./components/Profile/__form-top/profile__form-top.css);
 @import url(./components/Profile/__form/profile__form.css);
 @import url(./components/Profile/__sign-out/profile__sign-out.css);
-@import url(./components/Profile/__title/profile__title.css);
+@import url(./components/Profile/__title/Profile__title.css);
 @import url(./components/Profile/__data-line/profile__data-line.css);
 @import url(./components/Profile/__success/profile__success.css);
 

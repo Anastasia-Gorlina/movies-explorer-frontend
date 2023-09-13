@@ -1,7 +1,7 @@
 function Footer() {
   
   return (
-    <footer className="footer">
+    <footer className="Footer">
       <div className="Footer__info">
         <p className="Footer__text">Учебный проект Яндекс.Практикум х BeatFilm.</p>
       </div>

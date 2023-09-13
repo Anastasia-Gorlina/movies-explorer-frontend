@@ -1,4 +1,4 @@
-import { SHORT_FILM_DURATION } from './Constants'
+import { SHORT_FILM_DURATION } from './constants'
 import isURL from 'validator/lib/isURL';
 
 export function findMovies(movies, searchStr, isShortMovies) {

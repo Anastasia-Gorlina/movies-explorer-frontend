@@ -1,4 +1,4 @@
-import { BASE_URL } from './Constants.js';
+import { BASE_URL } from './constants.js';
 
 class Api {
   constructor(options) {

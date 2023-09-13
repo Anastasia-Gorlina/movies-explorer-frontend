@@ -40,10 +40,10 @@ function Profile({ onSubmit, onSignout, updateProfileStats, clearErors, disabled
   }
 
   return (
-    <section className="profile">
+    <section className="Profile">
       <form className="profile__form">
         <div className="profile__form-top">
-          <p className="profile__title">Привет, {currentUser.data.name}!</p>
+          <p className="Profile__title">Привет, {currentUser.data.name}!</p>
           <div className="profile__data">
             <div className="profile__data-line">
               <p className="profile__data-text">Имя</p>

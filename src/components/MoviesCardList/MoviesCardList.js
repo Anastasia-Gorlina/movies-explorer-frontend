@@ -1,7 +1,7 @@
 import { useState, useEffect, useLayoutEffect } from 'react';
 import { useLocation } from 'react-router-dom'
 import MoviesCard from "../MoviesCard/MoviesCard";
-import { MOVIES_LIST_RENDER_CONFIG } from '../../utils/Constants';
+import { MOVIES_LIST_RENDER_CONFIG } from '../../utils/constants';
 
 function MoviesCardList({ movies, handleCardClick }) {
 

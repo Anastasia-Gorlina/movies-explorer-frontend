@@ -16,7 +16,7 @@ function Header({isLoggedIn}) {
   return (
     <header className="Header standart-paddings" style={{ backgroundColor: path === '/' ? '#F3C1F8' : 'white' }}>
       <div className="Header__left-links">
-        <Link to="/" className="Header__logo">
+        <Link to="/" className="header__logo">
           <img src={logo} alt="Логотип" />
         </Link>
         {needNav && window.innerWidth > 850 && <Navigation />}
