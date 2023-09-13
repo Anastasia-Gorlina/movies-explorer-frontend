@@ -1,0 +1,25 @@
+.SearchForm__switch {
+    display: flex;
+    margin: 0;
+    gap: 14px;
+    align-items: center;
+    padding: 0;
+    min-height: 40px;
+  }
+
+  @media screen and (max-width: 768px) {
+    .SearchForm__switch {
+        gap: 15px;
+        min-height: 40px;
+      }
+  }
+
+  @media screen and (max-width: 450px) {
+    .SearchForm__switch {
+        padding: 0;
+        margin: 29px 0 0 0;
+        gap: 13px;
+        min-height: 20px;
+        border-left: 0;
+      }
+  }

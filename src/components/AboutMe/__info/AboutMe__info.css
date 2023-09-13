@@ -1,0 +1,11 @@
+.AboutMe__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  
+  @media (max-width: 499px) {
+    .AboutMe__info {
+      flex-direction: column-reverse;
+    }
+  }

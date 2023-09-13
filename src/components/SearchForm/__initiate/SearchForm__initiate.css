@@ -1,0 +1,16 @@
+.SearchForm__initiate {
+    display: flex;
+    width: 100%;
+  }
+
+  @media screen and (max-width: 768px) {
+    .SearchForm__initiate {
+        width: 100%;
+      }
+  }
+
+  @media screen and (max-width: 450px) {
+    .SearchForm__initiate {
+        width: 100%;
+      }
+  }

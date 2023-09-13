@@ -1,0 +1,32 @@
+.AboutMe__desc {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: #000000;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 56px;
+  }
+
+  @media (max-width: 998px) {
+    .AboutMe__desc{
+      max-width: 440px;
+    }
+  }
+  
+  @media (min-width: 500px) and (max-width: 850px) {
+    .AboutMe__desc {
+      font-size: 12px;
+      line-height: 18px;
+      max-width: 364px;
+    }
+  }
+  
+  @media (max-width: 499px) {
+    .AboutMe__desc {
+      font-size: 11px;
+      line-height: 16px;
+      max-width: 100%;
+      margin-bottom: 68px;
+    }
+  }

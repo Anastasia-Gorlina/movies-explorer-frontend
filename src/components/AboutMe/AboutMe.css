@@ -1,0 +1,21 @@
+.AboutMe {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 134px 70px;
+  max-width: 1280px;
+  margin: auto;
+}
+
+
+@media (min-width: 500px) and (max-width: 850px) {
+  .AboutMe {
+    padding: 108px 50px 91px 50px;
+  }
+}
+
+@media (max-width: 499px) {
+  .AboutMe {
+    padding: 72px 14px;
+  }
+}

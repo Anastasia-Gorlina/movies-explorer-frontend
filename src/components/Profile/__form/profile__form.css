@@ -1,0 +1,21 @@
+.profile__form {
+    width: 410px;
+    margin: 74px auto 70px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-between;
+  }
+
+  @media (min-width: 500px) and (max-width: 850px) {
+    .profile__form {
+        margin: 211px auto 67px;
+      }
+  }
+
+  @media (max-width: 499px) {
+    .profile__form {
+      width: 260px;
+      margin-top: 66px;
+    }
+}

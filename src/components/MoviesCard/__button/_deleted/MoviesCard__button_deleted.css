@@ -1,0 +1,11 @@
+.MoviesCard__button_deleted {
+    position: absolute;
+    width: 21px;
+    top: 14px;
+    right: 14px;
+    background-image: url('../../../../images/delete.svg');
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border: none;
+    transition: 0.35s;
+  }

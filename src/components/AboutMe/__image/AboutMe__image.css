@@ -1,0 +1,29 @@
+.AboutMe__image {
+    background-image: url('../../../images/me.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    width: 270px;
+    height: 327px;
+  }
+
+  @media (max-width: 998px) {
+    .AboutMe__image {
+      height: 307px;
+      width: 255px;
+    }
+  }
+  
+  @media (min-width: 500px) and (max-width: 850px) {
+    .AboutMe__image{
+      margin-left: 15px;
+    }
+  }
+  
+  @media (max-width: 499px) {
+    .AboutMe__image {
+      width: 292px;
+      height: 352px;
+      margin: auto;
+    }
+  }

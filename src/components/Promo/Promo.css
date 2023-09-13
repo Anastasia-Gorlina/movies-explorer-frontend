@@ -1,0 +1,21 @@
+.promo {
+  height: 524px;
+  background-color: #F3C1F8;
+  background-image: url(../../images/banner-background.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-top: 18px;
+  border: none;
+}
+
+@media (min-width: 500px) and (max-width: 850px) {
+  .promo {
+    height: 784px;
+  }
+}
+
+@media (max-width: 499px) {
+  .promo {
+    height: 570px;
+  }
+}

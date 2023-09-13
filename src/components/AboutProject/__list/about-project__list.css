@@ -1,0 +1,23 @@
+.about-project__list {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 110px;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+  }
+
+@media (min-width: 500px) and (max-width: 850px) {
+  .about-project__list {
+    margin-bottom: 93px;
+    }
+}
+
+@media (max-width: 499px) {
+  .about-project__list {
+    margin-bottom: 59px;
+    flex-direction: column;
+    gap: 57px;
+}
+}

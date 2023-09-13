@@ -1,0 +1,12 @@
+.Footer__line {
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (min-width: 500px) and (max-width: 850px) {
+    .Footer__line {
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 30px;
+    }
+  }

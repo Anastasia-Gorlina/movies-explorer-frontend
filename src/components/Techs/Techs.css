@@ -1,0 +1,23 @@
+.techs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #F5F5F5;
+  padding: 80px 70px;
+  margin: auto;
+}
+
+
+@media (min-width: 500px) and (max-width: 850px) {
+  .techs {
+    padding: 75px 50px;
+  }
+}
+
+@media (max-width: 499px) {
+  .techs {
+    padding: 56px 18px;
+    background-color: white;
+  }
+}

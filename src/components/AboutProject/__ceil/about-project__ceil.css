@@ -1,0 +1,18 @@
+.about-project__ceil {
+    background-color: black;
+    color: white;
+    height: 36px;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 17px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+@media (max-width: 499px) {
+.about-project__ceil {
+    font-size: 11px;
+    line-height: 13px;
+}
+}

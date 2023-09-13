@@ -1,0 +1,27 @@
+.SearchForm__container {
+    margin: 0;
+    max-height: 72px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 89.08%;
+    padding: 0 0 69px 0;
+    border-bottom: 1px solid #E8E8E8;
+  }
+
+  @media screen and (max-width: 768px) {
+    .SearchForm__container {
+        padding-bottom: 109px;
+        width: 92.1875%;
+      }
+  }
+
+  @media screen and (max-width: 450px) {
+    .SearchForm__container {
+        padding: 0;
+        margin: 0 0 100px 0;
+        background-color: rgba(255, 255, 255, 1);
+        border: none;
+        width: 93.75%;
+      }
+  }

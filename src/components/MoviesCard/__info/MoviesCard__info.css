@@ -1,0 +1,8 @@
+.MoviesCard__info {
+    display: flex;
+    position: relative;
+  }
+
+.MoviesCard__info:hover .card__button_deleted {
+  opacity: 1;
+}

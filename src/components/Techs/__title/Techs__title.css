@@ -1,0 +1,27 @@
+.techs__title {
+    font-weight: 400;
+    max-width: 1280px;
+    width: 100%;
+    margin: auto;
+    padding-bottom: 23px;
+    font-size: 22px;
+    line-height: 27px;
+    text-align: left;
+    margin-bottom: 90px;
+    border-bottom: 1px solid #000000;
+    align-self: stretch;
+  }
+
+@media (min-width: 500px) and (max-width: 850px) {
+    .techs__title {
+        margin-bottom: 80px;
+    }
+}
+  
+@media (max-width: 499px) {
+    .techs__title {
+        margin-bottom: 64px;
+        font-size: 18px;
+        line-height: 22px;
+    }
+}

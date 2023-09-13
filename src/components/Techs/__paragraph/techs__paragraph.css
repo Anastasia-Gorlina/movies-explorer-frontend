@@ -1,0 +1,29 @@
+.techs__paragraph {
+    margin: 0;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: -0.04em;
+    color: #000000;
+    margin-bottom: 100px;
+    max-width: 460px;
+  }
+
+@media (min-width: 500px) and (max-width: 850px) {
+    .techs__paragraph {
+        font-size: 12px;
+        line-height: 18px;
+        text-align: center;
+        letter-spacing: -0.04em;
+        margin-bottom: 80px;
+    }
+}
+
+@media (max-width: 499px) {
+    .techs__paragraph {
+        font-size: 11px;
+        line-height: 16px;
+        margin-bottom: 50px;
+    }
+}

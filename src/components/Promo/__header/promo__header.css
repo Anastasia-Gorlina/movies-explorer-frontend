@@ -1,0 +1,24 @@
+.promo__header {
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 58px;
+    letter-spacing: -0.04em;
+    text-align: center;
+    margin: auto;
+    padding-top: 184px;
+    max-width: 730px;
+  }
+
+@media (min-width: 500px) and (max-width: 850px) {
+.promo__header {
+    padding-top: 326px;
+    }
+}
+
+@media (max-width: 499px) {
+    .promo__header {
+      padding-top: 207px;
+      font-size: 31px;
+      line-height: 39px;
+    }
+}

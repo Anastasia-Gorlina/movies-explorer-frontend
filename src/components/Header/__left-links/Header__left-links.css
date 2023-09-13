@@ -1,0 +1,17 @@
+.Header__left-links {
+    display: flex;
+    align-items: center;
+    gap: 721px;
+  }
+  
+  @media (max-width: 1200px) {
+    .Header__left-links {
+      gap: 230px;
+    }
+  }
+
+  @media (max-width: 560px) {
+    .Header__left-links {
+      gap: 0px;
+    }
+  }
