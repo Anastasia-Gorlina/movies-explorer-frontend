@@ -15,7 +15,7 @@ function Menu({ isOpen, onClose }) {
             <NavLink to='/movies' className={setLinkStyle} onClick={onClose}>Фильмы</NavLink>
             <NavLink to='/saved-movies' className={setLinkStyle} onClick={onClose}>Сохраненные фильмы</NavLink>
           </nav>
-          <NavLink to="/profile" className="menu__account link" onClick={onClose}>
+          <NavLink to='/profile' className="menu__account link" onClick={onClose}>
           Аккаунт
           <button type="button" className="menu__account-icon button" />
         </NavLink>

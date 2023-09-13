@@ -1,0 +1,13 @@
+.SearchForm__error {
+    margin-top: 20px;
+    align-self: start;
+    color: red;
+  }
+  
+  
+@media (max-width: 499px) {
+    .SearchForm__error {
+      font-size: 11px;
+      line-height: 17px;
+    }
+  }
