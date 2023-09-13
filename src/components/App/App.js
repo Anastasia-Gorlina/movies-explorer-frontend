@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
 import { Routes, Route, useLocation, useNavigate } from 'react-router-dom'
 import { CurrentUserContext } from '../../contexts/CurrentUserContext'
-import * as auth from '../../utils/auth'
+import * as auth from '../../utils/Auth'
 import api from '../../utils/MainApi'
-import moviesApi from '../../utils/moviesApi'
+import moviesApi from '../../utils/MoviesApi'
 import { validateMovie } from '../../utils/Help'
 import { authErrors, profileErrors } from '../../utils/constants';
 import Header from '../Header/Header'

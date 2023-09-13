@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import api from '../../utils/MainApi'
-import moviesApi from '../../utils/moviesApi'
+import moviesApi from '../../utils/MoviesApi'
 import { findMovies, validateMovie } from '../../utils/Help'
 import SearchForm from '../SearchForm/SearchForm'
 import Preloader from '../Preloader/Preloader';

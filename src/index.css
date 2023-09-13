@@ -37,7 +37,7 @@
 @import url(./components/FilterCheckbox/__text/FilterCheckbox__text.css);
 @import url(./components/FilterCheckbox/__visible-checkbox/FilterCheckbox__visible-checkbox.css);
 
-@import url(./components/Footer/Footer.css);
+@import url(./components/Footer/footer.css);
 @import url(./components/Footer/__info/Footer__info.css);
 @import url(./components/Footer/__line/Footer__line.css);
 @import url(./components/Footer/__link/footer__link.css);
@@ -45,7 +45,7 @@
 @import url(./components/Footer/__text/Footer__text.css);
 @import url(./components/Footer/__year/Footer__year.css);
 
-@import url(./components/Header/Header.css);
+@import url(./components/Header/header.css);
 @import url(./components/Header/__account-icon/Header__account-icon.css);
 @import url(./components/Header/__account/Header__account.css);
 @import url(./components/Header/__left-links/Header__left-links.css);
