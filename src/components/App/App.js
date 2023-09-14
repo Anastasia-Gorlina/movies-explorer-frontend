@@ -5,7 +5,7 @@ import * as auth from '../../utils/Auth'
 import api from '../../utils/MainApi'
 import moviesApi from '../../utils/MoviesApi'
 import { validateMovie } from '../../utils/Help'
-import { authErrors, profileErrors } from '../../utils/constants';
+import { authErrors, profileErrors } from '../../utils/Constants';
 import Header from '../Header/Header'
 import Main from '../Main/Main'
 import Footer from '../Footer/Footer'

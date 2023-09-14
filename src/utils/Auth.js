@@ -1,4 +1,4 @@
-import { BASE_URL } from './constants.js';
+import { BASE_URL } from './Constants.js';
 
 export function register(email, password, name) {
   return fetch(BASE_URL + '/signup', {
