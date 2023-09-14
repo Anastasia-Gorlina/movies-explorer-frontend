@@ -14,7 +14,7 @@ function Header({isLoggedIn}) {
   }, [isLoggedIn])
 
   return (
-    <header className="Header standart-paddings" style={{ backgroundColor: path === '/' ? '#F3C1F8' : 'white' }}>
+    <header className="header standart-paddings" style={{ backgroundColor: path === '/' ? '#F3C1F8' : 'white' }}>
       <div className="Header__left-links">
         <Link to="/" className="header__logo">
           <img src={logo} alt="Логотип" />
