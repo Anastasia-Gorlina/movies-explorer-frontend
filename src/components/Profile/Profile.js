@@ -5,12 +5,12 @@ import { useFormWithValidation } from '../../customHooks/validation';
 import validator from 'validator';
 
 function Profile({ onSubmit, onSignout, updateProfileStats, clearErors, disabledForm }) {
-
+  console.log(updateProfileStats)
   const [inputIsReadOnly, setInputIsReadOnly] = useState(true);
   const { values, handleChange, resetForm, errors, isValid, setValues } = useFormWithValidation();
   const currentUser = useContext(CurrentUserContext);
 
-  useEffect(() =>{ return clearErors()}, [clearErors])
+  useEffect(() =>{ return clearErors()}, [])
 
   useEffect(() => {
     resetForm();
@@ -85,8 +85,9 @@ function Profile({ onSubmit, onSignout, updateProfileStats, clearErors, disabled
           </div>
         </div>
         <div className="profile__form-bottom">
-
-        <span className={updateProfileStats.type === 'error' ? 'profile__error' : 'profile__success'}>{updateProfileStats.text || ''}</span>
+        
+        <span className={updateProfileStats.type === 'error' ? 'profile__error' : 'profile__success'}>{updateProfileStats.text || ' '}</span>
+        
         {
             inputIsReadOnly && <>
               <p className='profile__edit' onClick={onEdit}>Редактировать</p>

@@ -1,12 +1,12 @@
-export const BASE_URL = 'https://api.anastasia.gorlina.nomoreparties.co';
-//export const BASE_URL = 'http://localhost:3001';
+//export const BASE_URL = 'https://api.anastasia.gorlina.nomoreparties.co';
+export const BASE_URL = 'http://localhost:3001';
 export const MOVIES_URL = 'https://api.nomoreparties.co/beatfilm-movies';
 export const MOVIES_LIST_RENDER_CONFIG = {
   '1280px': { maxAmount: 12, amountToAdd: 3 },
   '768px': { maxAmount: 8, amountToAdd: 2 },
   '320px': { maxAmount: 5, amountToAdd: 2 },
 }
-export const SHORT_FILM_DURATION = 40;
+export const SHORT_FILM_DURATION = 39;
 
 export const profileErrors = {
   generalError: 'При обновлении профиля произошла ошибка.',

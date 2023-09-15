@@ -13,22 +13,27 @@ function SearchForm({ onClick, initialSearchStr = '', isShort }) {
   }, [initialSearchStr, isShort])
 
   useEffect(() => {
-    if (searchStr.length) {
+    //if (searchStr.length === 0) {
       onClick(searchStr, needShortFilmFilter);
-    }
+    //}
   }, [needShortFilmFilter])
 
   function onChange(e) {
     setSearchStr(e.target.value);
-    if (e.target.value.length === 0) {
+   /* if (e.target.value.length === 0) {
       setFilmError('Нужно ввести ключевое слово.');
     } else {
       setFilmError('');
-    }
+    }*/
   }
 
   function handleButtonClick(e) {
     e.preventDefault();
+    if (searchStr.length === 0) {
+      setFilmError('Нужно ввести ключевое слово.');
+    } else {
+      setFilmError('');
+    }
     onClick(searchStr, needShortFilmFilter, true);
   }
 
@@ -39,11 +44,11 @@ function SearchForm({ onClick, initialSearchStr = '', isShort }) {
           <div className="SearchForm__field">
             <div className="SearchForm__initiate">
               <img className="SearchForm__image" src={search} alt="поиск" />
-              <input 
-                placeholder="Фильм" 
-                type="text" 
-                name="film" 
-                required 
+              <input
+                placeholder="Фильм"
+                type="text"
+                name="film"
+                required
                 className="SearchForm__input" 
                 value={searchStr}
                 onChange={onChange}>

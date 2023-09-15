@@ -6,11 +6,13 @@ import MoviesCardList from '../MoviesCardList/MoviesCardList';
 
 function SavedMovies({ savedMovies }) {
 
+
   const [movies, setMovies] = useState([]);
 
   useEffect(() => {
     setMovies(savedMovies)
   }, [])
+  
   
   function getMovies(searchStr, isShortMovies) {
     const moviesList = findMovies(savedMovies, searchStr, isShortMovies)

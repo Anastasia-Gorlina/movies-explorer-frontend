@@ -156,7 +156,7 @@ function App() {
               path='/movies'
               element={
                 <ProtectedRoute isLoggedIn={isLoggedIn}>
-                  <Movies savedMovies={savedMovies} allMoviesFromServer={allMovies}
+                  <Movies savedMovies={savedMovies} allMoviesFromServer={allMovies} setSavedMovies={setSavedMovies}
                     isGetMoviesError={isGetMoviesError} isLoading={isLoading} />
                 </ProtectedRoute>
               }

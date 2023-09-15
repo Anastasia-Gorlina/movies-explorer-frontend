@@ -6,14 +6,15 @@ import SearchForm from '../SearchForm/SearchForm'
 import Preloader from '../Preloader/Preloader';
 import MoviesCardList from '../MoviesCardList/MoviesCardList'
 import NotFound from '../NotFound/NotFound';
+import SavedMovies from '../SavedMovies/SavedMovies';
 
-function Movies({ savedMovies, allMoviesFromServer, isGetMoviesError, isLoading }) {
-
+function Movies({ savedMovies, allMoviesFromServer, isGetMoviesError, isLoading, setSavedMovies }) {
+  console.log(savedMovies)
   const [allMovies, setAllMovies] = useState([]);
   const [movies, setMovies] = useState([]);
   const [isShortFilm, setIsShortFilm] = useState(false);
   const [keywords, setKeywords] = useState('');
-
+  console.log(movies)
   const initialMovies = JSON.parse(localStorage.getItem('initialMovies'));
 
   useEffect(() => {
@@ -31,12 +32,6 @@ function Movies({ savedMovies, allMoviesFromServer, isGetMoviesError, isLoading 
     }
   }, [allMoviesFromServer])
 
-  useEffect(() => {
-    movies.forEach(el => {
-      el.isLiked = savedMovies.findIndex(i => i.movieId === el.movieId) > -1
-    });
-  }, [movies, savedMovies])
-
   function getMovies(searchStr, isShortMovies) {
     localStorage.setItem('keywords', searchStr);
     localStorage.setItem('shortMovie', isShortMovies);
@@ -48,9 +43,10 @@ function Movies({ savedMovies, allMoviesFromServer, isGetMoviesError, isLoading 
   }
 
   function addCardToSaved(e, movie) {
-    const isLiked = movie.isLiked
+    // const isLiked = movie.isLiked
+    const isLiked = savedMovies.findIndex(i => i.movieId === movie.movieId) > -1
     if (isLiked) {
-      const idx = savedMovies.findIndex(i => i.movieId === movie.movieId)
+      const idx = savedMovies?.findIndex(i => i.movieId === movie.movieId)
       api.deleteSavedMovie(savedMovies[idx]._id)
         .then(res => {
           e.target.classList.remove('MoviesCard__button_saved')
@@ -61,9 +57,9 @@ function Movies({ savedMovies, allMoviesFromServer, isGetMoviesError, isLoading 
       delete movie.isLiked
       api.addSavedMovie(movie)
         .then((res) => {
+          console.log(res)
           e.target.classList.add('MoviesCard__button_saved')
-          
-          savedMovies.push(res)
+          setSavedMovies([...savedMovies, res.data])
         })
         .catch(err => console.log(err))
     }
