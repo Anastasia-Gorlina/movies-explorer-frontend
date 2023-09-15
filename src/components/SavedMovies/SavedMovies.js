@@ -11,7 +11,7 @@ function SavedMovies({ savedMovies }) {
   useEffect(() => {
     setMovies(savedMovies)
   }, [])
-
+  
   function getMovies(searchStr, isShortMovies) {
     const moviesList = findMovies(savedMovies, searchStr, isShortMovies)
     setMovies(moviesList)
@@ -20,7 +20,7 @@ function SavedMovies({ savedMovies }) {
   function deleteCard(e, movie) {
     api.deleteSavedMovie(movie._id)
       .then(res => {
-        const idx = savedMovies.findIndex(i => i.movieId === res.movieId)
+        const idx = savedMovies.findIndex(i => i.movieId === movie.movieId)
         savedMovies.splice(idx, 1)
         setMovies([...savedMovies])
       })

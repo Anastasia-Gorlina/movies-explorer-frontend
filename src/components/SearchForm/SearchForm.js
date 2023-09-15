@@ -58,8 +58,8 @@ function SearchForm({ onClick, initialSearchStr = '', isShort }) {
               Найти
             </button>
           </div>
-          <FilterCheckbox className="search-form__checkbox" onCheckBoxClick={setNeedShortFilmFilter} initState={needShortFilmFilter} />
-      <h1>{!!searchStr}</h1>
+          <FilterCheckbox className="SearchForm__checkbox" onCheckBoxClick={setNeedShortFilmFilter} initState={needShortFilmFilter} />
+          <h1>{!!searchStr}</h1>
         </form>
       </div>
     </section>

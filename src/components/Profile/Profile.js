@@ -17,8 +17,8 @@ function Profile({ onSubmit, onSignout, updateProfileStats, clearErors, disabled
   }, [resetForm]);
 
   useEffect(() => {
-    if (currentUser.name && currentUser.email) {
-      setValues({ name: currentUser.name, email: currentUser.email })
+    if (currentUser.data.name && currentUser.data.email) {
+      setValues({ name: currentUser.data.name, email: currentUser.data.email })
     }
   }, [currentUser]);
 

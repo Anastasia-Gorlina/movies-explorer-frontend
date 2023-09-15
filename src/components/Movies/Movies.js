@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
-import api from '../../utils/MainApi'
-import moviesApi from '../../utils/MoviesApi'
-import { findMovies, validateMovie } from '../../utils/Help'
+import api from '../../utils/MainApi';
+import moviesApi from '../../utils/MoviesApi';
+import { findMovies, validateMovie } from '../../utils/Help';
 import SearchForm from '../SearchForm/SearchForm'
 import Preloader from '../Preloader/Preloader';
 import MoviesCardList from '../MoviesCardList/MoviesCardList'
@@ -62,8 +62,8 @@ function Movies({ savedMovies, allMoviesFromServer, isGetMoviesError, isLoading 
       api.addSavedMovie(movie)
         .then((res) => {
           e.target.classList.add('MoviesCard__button_saved')
+          
           savedMovies.push(res)
-
         })
         .catch(err => console.log(err))
     }

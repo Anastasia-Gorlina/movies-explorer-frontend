@@ -17,7 +17,7 @@ function MoviesCard({ movie, isOpenSavedMovies, handleCardClick }) {
 	return (
 		<div className="MoviesCard">
 			<a className="MoviesCard__link link" href={movie.trailerLink} target="_blank" rel="noreferrer">
-				<img src={movie.image} className="MoviesCard__image" alt={`Постер фильма ${movie.nameRu}`} />
+				<img src={movie.image} className="MoviesCard__image" alt={`Постер фильма ${movie.nameRU}`} />
 			</a>
 			<button type="button" className={`button MoviesCard__button${movie.isLiked ? ' MoviesCard__button_saved' : ''}${isOpenSavedMovies ? ' MoviesCard__button_deleted' : ''}`}
 			onClick={onCardClick}></button>
