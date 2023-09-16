@@ -9,12 +9,12 @@ import NotFound from '../NotFound/NotFound';
 import SavedMovies from '../SavedMovies/SavedMovies';
 
 function Movies({ savedMovies, allMoviesFromServer, isGetMoviesError, isLoading, setSavedMovies }) {
-  console.log(savedMovies)
+  
   const [allMovies, setAllMovies] = useState([]);
   const [movies, setMovies] = useState([]);
   const [isShortFilm, setIsShortFilm] = useState(false);
   const [keywords, setKeywords] = useState('');
-  console.log(movies)
+  console.log('movies', movies)
   const initialMovies = JSON.parse(localStorage.getItem('initialMovies'));
 
   useEffect(() => {
@@ -27,12 +27,13 @@ function Movies({ savedMovies, allMoviesFromServer, isGetMoviesError, isLoading,
 
   useEffect(() => {
     setAllMovies(allMoviesFromServer)
-    if (!keywords && (!initialMovies || !initialMovies.length)) {
+    if ((!initialMovies || !initialMovies.length)) {
       setMovies(allMoviesFromServer)
     }
   }, [allMoviesFromServer])
 
   function getMovies(searchStr, isShortMovies) {
+    console.log('searchStr', searchStr);
     localStorage.setItem('keywords', searchStr);
     localStorage.setItem('shortMovie', isShortMovies);
     if (allMovies.length) {
@@ -57,7 +58,6 @@ function Movies({ savedMovies, allMoviesFromServer, isGetMoviesError, isLoading,
       delete movie.isLiked
       api.addSavedMovie(movie)
         .then((res) => {
-          console.log(res)
           e.target.classList.add('MoviesCard__button_saved')
           setSavedMovies([...savedMovies, res.data])
         })
@@ -67,11 +67,11 @@ function Movies({ savedMovies, allMoviesFromServer, isGetMoviesError, isLoading,
 
   return (
     <section>
-      <SearchForm onClick={getMovies} isShort={isShortFilm} initialSearchStr={keywords} />
+      <SearchForm onClick={getMovies} isShort={isShortFilm} isMovie/>
       {isLoading && <Preloader />}
       {isGetMoviesError && <p className='movies__error'>Во время запроса произошла ошибка. Возможно, проблема с соединением или сервер недоступен. Подождите немного и попробуйте ещё раз</p>}
       {!movies.length && !isGetMoviesError && <NotFound />}
-      {!isLoading && !!movies.length && <MoviesCardList movies={movies} handleCardClick={addCardToSaved} />}
+      {!isLoading && !!movies.length && <MoviesCardList movies={movies} savedMovies={savedMovies} handleCardClick={addCardToSaved} />}
     </section>
   )
 }

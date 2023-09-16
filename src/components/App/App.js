@@ -126,6 +126,8 @@ function App() {
     localStorage.removeItem('keywords');
     localStorage.removeItem('initialMovies');
     localStorage.removeItem('shortMovie');
+    localStorage.removeItem('needShortFilmFilter');
+    localStorage.removeItem('searchStr');
   }
 
   function clearErrorMessages() {

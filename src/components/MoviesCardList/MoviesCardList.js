@@ -3,7 +3,7 @@ import { useLocation } from 'react-router-dom'
 import MoviesCard from "../MoviesCard/MoviesCard";
 import { MOVIES_LIST_RENDER_CONFIG } from '../../utils/Constants';
 
-function MoviesCardList({ movies, handleCardClick }) {
+function MoviesCardList({ movies, handleCardClick, savedMovies }) {
 
   const [counter, setCounter] = useState(0);
   const [maxAmountOfCard, setMaxAmountOfCard] = useState(0);
@@ -54,12 +54,15 @@ function MoviesCardList({ movies, handleCardClick }) {
   return (
     <div className="MoviesCardList">
       <ul className="MoviesCardList__catalog">
-        {shownMovies
-          .map((item) => (
-            <li className="MoviesCardList__catalog_item" key={item.movieId}>
-              <MoviesCard movie={item} isOpenSavedMovies={isOpenSavedMovies} handleCardClick={handleCardClick}/>
-            </li>
-          ))
+      {shownMovies
+          .map((item) => {
+            const isLiked = savedMovies?.findIndex(i => i.movieId === item.movieId) > -1
+            return (
+              <li className="MoviesCardList__catalog_item" key={item.movieId}>
+                <MoviesCard movie={item} isOpenSavedMovies={isOpenSavedMovies} isLiked={isLiked} handleCardClick={handleCardClick} />
+              </li>
+            )
+          })
         }
       </ul>
       {movies.length !== shownMovies.length && <button type="button" className="button MoviesCardList__more-button" onClick={addMovies}>Еще</button>}

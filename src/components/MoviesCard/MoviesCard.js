@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 
-function MoviesCard({ movie, isOpenSavedMovies, handleCardClick }) {
-
+function MoviesCard({ movie, isOpenSavedMovies, handleCardClick, isLiked }) {
+console.log('moviesCard', {movie, isOpenSavedMovies})
 	const [durationTitle, setDurationTitle] = useState('')
 
 	useEffect(() => {
@@ -19,7 +19,7 @@ function MoviesCard({ movie, isOpenSavedMovies, handleCardClick }) {
 			<a className="MoviesCard__link link" href={movie.trailerLink} target="_blank" rel="noreferrer">
 				<img src={movie.image} className="MoviesCard__image" alt={`Постер фильма ${movie.nameRU}`} />
 			</a>
-			<button type="button" className={`button MoviesCard__button${movie.isLiked ? ' MoviesCard__button_saved' : ''}${isOpenSavedMovies ? ' MoviesCard__button_deleted' : ''}`}
+			<button type="button" className={`button MoviesCard__button ${isLiked ? ' MoviesCard__button_saved' : ''}${isOpenSavedMovies ? ' MoviesCard__button_deleted' : ''}`}
 			onClick={onCardClick}></button>
 			<div className="MoviesCard__info">
 				<div className="MoviesCard__desc">

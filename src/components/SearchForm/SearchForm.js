@@ -2,24 +2,33 @@ import search from "../../images/search.svg";
 import { useState, useEffect } from 'react';
 import FilterCheckbox from '../FilterCheckbox/FilterCheckbox';
 
-function SearchForm({ onClick, initialSearchStr = '', isShort }) {
-  const [searchStr, setSearchStr] = useState('');
+function SearchForm({ onClick, initialSearchStr = '', isShort, isMovie }) {
+  const [searchStr, setSearchStr] = useState(localStorage.getItem('searchStr'));
   const [filmError, setFilmError] = useState('');
-  const [needShortFilmFilter, setNeedShortFilmFilter] = useState(false);
+  const [needShortFilmFilter, setNeedShortFilmFilter] = useState(localStorage.getItem('needShortFilmFilter'));
 
   useEffect(() => {
-    setSearchStr(initialSearchStr)
-    setNeedShortFilmFilter(isShort) 
+    if(!isMovie) {
+      setSearchStr(initialSearchStr)
+    }
+    setNeedShortFilmFilter(isShort)
   }, [initialSearchStr, isShort])
 
   useEffect(() => {
     //if (searchStr.length === 0) {
       onClick(searchStr, needShortFilmFilter);
     //}
+    console.log('searchStr123', searchStr);
   }, [needShortFilmFilter])
+
+  const onCheckBoxClick = (value) => {
+    setNeedShortFilmFilter(value);
+    localStorage.setItem('needShortFilmFilter', value)
+  }
 
   function onChange(e) {
     setSearchStr(e.target.value);
+    localStorage.setItem('searchStr', e.target.value)
    /* if (e.target.value.length === 0) {
       setFilmError('Нужно ввести ключевое слово.');
     } else {
@@ -29,11 +38,11 @@ function SearchForm({ onClick, initialSearchStr = '', isShort }) {
 
   function handleButtonClick(e) {
     e.preventDefault();
-    if (searchStr.length === 0) {
+    /*if (searchStr.length === 0) {
       setFilmError('Нужно ввести ключевое слово.');
     } else {
       setFilmError('');
-    }
+    }*/
     onClick(searchStr, needShortFilmFilter, true);
   }
 
@@ -56,14 +65,13 @@ function SearchForm({ onClick, initialSearchStr = '', isShort }) {
             </div>
             <span className="SearchForm__error">{filmError}</span>
             <button 
-              disabled={!searchStr}
               onClick={handleButtonClick}
               className="button SearchForm__button" 
               type="submit">
               Найти
             </button>
           </div>
-          <FilterCheckbox className="SearchForm__checkbox" onCheckBoxClick={setNeedShortFilmFilter} initState={needShortFilmFilter} />
+          <FilterCheckbox className="SearchForm__checkbox" onCheckBoxClick={onCheckBoxClick} initState={needShortFilmFilter} />
           <h1>{!!searchStr}</h1>
         </form>
       </div>
