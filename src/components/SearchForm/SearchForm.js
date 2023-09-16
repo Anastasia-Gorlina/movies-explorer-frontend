@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import FilterCheckbox from '../FilterCheckbox/FilterCheckbox';
 
 function SearchForm({ onClick, initialSearchStr = '', isShort, isMovie }) {
-  const [searchStr, setSearchStr] = useState(localStorage.getItem('searchStr'));
+  const [searchStr, setSearchStr] = useState(localStorage.getItem('searchStr') || '');
   const [filmError, setFilmError] = useState('');
   const [needShortFilmFilter, setNeedShortFilmFilter] = useState(localStorage.getItem('needShortFilmFilter'));
 
