@@ -5,7 +5,6 @@ import { useFormWithValidation } from '../../customHooks/validation';
 import validator from 'validator';
 
 function Profile({ onSubmit, onSignout, updateProfileStats, clearErors, disabledForm }) {
-  console.log(updateProfileStats)
   const [inputIsReadOnly, setInputIsReadOnly] = useState(true);
   const { values, handleChange, resetForm, errors, isValid, setValues } = useFormWithValidation();
   const currentUser = useContext(CurrentUserContext);

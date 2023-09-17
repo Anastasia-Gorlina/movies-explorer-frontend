@@ -10,7 +10,6 @@ function MoviesCardList({ movies, handleCardClick, savedMovies }) {
   const [amountToAdd, setAmountToAdd] = useState(0);
   const [width, setWidth] = useState(document.documentElement.clientWidth);
   const [shownMovies, setShownMovies] = useState([]);
-
   const path = useLocation().pathname;
   const isOpenSavedMovies = path === '/saved-movies'
 

@@ -3,6 +3,9 @@ import isURL from 'validator/lib/isURL';
 
 export function findMovies(movies, searchStr, isShortMovies) {
   searchStr = searchStr.toLowerCase();
+  if (!searchStr) {
+    return movies
+  } 
   const data = movies.filter(movie => {
     const movieRU = movie.nameRU.toLowerCase();
     const movieEN = movie.nameEN.toLowerCase();

@@ -165,7 +165,9 @@ function App() {
             />
             <Route
               path='/saved-movies'
-              element={<ProtectedRoute isLoggedIn={isLoggedIn}><SavedMovies savedMovies={savedMovies} /></ProtectedRoute>}
+              element={<ProtectedRoute isLoggedIn={isLoggedIn}>
+                <SavedMovies isGetMoviesError={isGetMoviesError} isLoading={isLoading} savedMovies={savedMovies} />
+              </ProtectedRoute>}
             />
             <Route
               path="/profile"
