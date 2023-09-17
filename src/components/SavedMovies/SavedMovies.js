@@ -24,7 +24,7 @@ function SavedMovies({ savedMovies, isGetMoviesError, isLoading }) {
         const idx = savedMovies.findIndex(i => i.movieId === movie.movieId)
         savedMovies.splice(idx, 1)
         
-        getMovies(searchStrSavedMovies, localStorage.getItem('needShortFilmFilter'))
+        getMovies(searchStrSavedMovies, JSON.parse(localStorage.getItem('needShortFilmFilter')))
       })
       .catch(err => console.log(err))
   }

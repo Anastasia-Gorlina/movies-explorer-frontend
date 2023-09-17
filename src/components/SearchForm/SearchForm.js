@@ -5,7 +5,7 @@ import FilterCheckbox from '../FilterCheckbox/FilterCheckbox';
 function SearchForm({ onClick, initialSearchStr = '', isShort, isMovie, setSearchStrSavedMovies = () => {} }) {
   const [searchStr, setSearchStr] = useState(localStorage.getItem('searchStr') || '');
   const [filmError, setFilmError] = useState('');
-  const [needShortFilmFilter, setNeedShortFilmFilter] = useState(localStorage.getItem('needShortFilmFilter'));
+  const [needShortFilmFilter, setNeedShortFilmFilter] = useState(JSON.parse(localStorage.getItem('needShortFilmFilter')));
 
   useEffect(() => {
     if(!isMovie) {
