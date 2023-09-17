@@ -6,7 +6,7 @@ import MoviesCardList from '../MoviesCardList/MoviesCardList';
 import NotFound from '../NotFound/NotFound';
 
 function SavedMovies({ savedMovies, isGetMoviesError, isLoading }) {
-
+  const [isShortSavedMovies, setIsShortSavedMovies] = useState(false)
   const [searchStrSavedMovies, setSearchStrSavedMovies] = useState('')
   const [movies, setMovies] = useState([]);
   useEffect(() => {
@@ -24,14 +24,14 @@ function SavedMovies({ savedMovies, isGetMoviesError, isLoading }) {
         const idx = savedMovies.findIndex(i => i.movieId === movie.movieId)
         savedMovies.splice(idx, 1)
         
-        getMovies(searchStrSavedMovies, JSON.parse(localStorage.getItem('needShortFilmFilter')))
+        getMovies(searchStrSavedMovies, isShortSavedMovies)
       })
       .catch(err => console.log(err))
   }
 
   return (
     <section>
-      <SearchForm onClick={getMovies} setSearchStrSavedMovies={setSearchStrSavedMovies} initialSearchStr="" isShort={false} />
+      <SearchForm onClick={getMovies} setSearchStrSavedMovies={setSearchStrSavedMovies} initialSearchStr="" isShort={false} setIsShortSavedMovies={setIsShortSavedMovies} />
       {!isLoading && !!savedMovies.length &&<MoviesCardList isOpenSavedMovies="true" movies={movies} handleCardClick={deleteCard} />}
       {(!savedMovies.length || !movies.length )&& !isGetMoviesError && <NotFound />}
     </section>

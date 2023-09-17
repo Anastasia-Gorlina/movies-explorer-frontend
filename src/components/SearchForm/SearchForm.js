@@ -2,11 +2,10 @@ import search from "../../images/search.svg";
 import { useState, useEffect } from 'react';
 import FilterCheckbox from '../FilterCheckbox/FilterCheckbox';
 
-function SearchForm({ onClick, initialSearchStr = '', isShort, isMovie, setSearchStrSavedMovies = () => {} }) {
+function SearchForm({ onClick, initialSearchStr = '', isShort, setIsShortSavedMovies = () => {} , isMovie, setSearchStrSavedMovies = () => {} }) {
   const [searchStr, setSearchStr] = useState(localStorage.getItem('searchStr') || '');
   const [filmError, setFilmError] = useState('');
-  const [needShortFilmFilter, setNeedShortFilmFilter] = useState(JSON.parse(localStorage.getItem('needShortFilmFilter')));
-
+  const [needShortFilmFilter, setNeedShortFilmFilter] = useState(isMovie ? JSON.parse(localStorage.getItem('needShortFilmFilter')) : false);
   useEffect(() => {
     if(!isMovie) {
       setSearchStr(initialSearchStr)
@@ -22,6 +21,7 @@ function SearchForm({ onClick, initialSearchStr = '', isShort, isMovie, setSearc
 
   const onCheckBoxClick = (value) => {
     setNeedShortFilmFilter(value);
+    setIsShortSavedMovies(value);
     if(isMovie) {
     localStorage.setItem('needShortFilmFilter', value)
     }
