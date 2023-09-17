@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 
 function MoviesCard({ movie, isOpenSavedMovies, handleCardClick, isLiked }) {
-console.log('moviesCard', {movie, isOpenSavedMovies})
 	const [durationTitle, setDurationTitle] = useState('')
 
 	useEffect(() => {

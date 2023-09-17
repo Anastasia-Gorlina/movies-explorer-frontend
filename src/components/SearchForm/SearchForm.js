@@ -18,17 +18,21 @@ function SearchForm({ onClick, initialSearchStr = '', isShort, isMovie }) {
     //if (searchStr.length === 0) {
       onClick(searchStr, needShortFilmFilter);
     //}
-    console.log('searchStr123', searchStr);
   }, [needShortFilmFilter])
 
   const onCheckBoxClick = (value) => {
     setNeedShortFilmFilter(value);
+    if(isMovie) {
     localStorage.setItem('needShortFilmFilter', value)
+    }
   }
 
   function onChange(e) {
     setSearchStr(e.target.value);
-    localStorage.setItem('searchStr', e.target.value)
+    if(isMovie) {
+      console.log('isMovie')
+      localStorage.setItem('searchStr', e.target.value)
+    }
    /* if (e.target.value.length === 0) {
       setFilmError('Нужно ввести ключевое слово.');
     } else {

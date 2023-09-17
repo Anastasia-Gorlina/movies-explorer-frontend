@@ -13,13 +13,11 @@ function Movies({ savedMovies, allMoviesFromServer, isGetMoviesError, isLoading,
   const [allMovies, setAllMovies] = useState([]);
   const [movies, setMovies] = useState([]);
   const [isShortFilm, setIsShortFilm] = useState(false);
-  const [keywords, setKeywords] = useState('');
-  console.log('movies', movies)
+  //const [keywords, setKeywords] = useState('');
   const initialMovies = JSON.parse(localStorage.getItem('initialMovies'));
 
   useEffect(() => {
-    const keywords = localStorage.getItem('keywords');
-    keywords && setKeywords(keywords);
+    
     initialMovies && setMovies(initialMovies);
     const shortMovie = localStorage.getItem('shortMovie');
     shortMovie && setIsShortFilm(JSON.parse(shortMovie));
@@ -33,8 +31,7 @@ function Movies({ savedMovies, allMoviesFromServer, isGetMoviesError, isLoading,
   }, [allMoviesFromServer])
 
   function getMovies(searchStr, isShortMovies) {
-    console.log('searchStr', searchStr);
-    localStorage.setItem('keywords', searchStr);
+    //localStorage.setItem('keywords', searchStr);
     localStorage.setItem('shortMovie', isShortMovies);
     if (allMovies.length) {
       const moviesList = findMovies(allMovies, searchStr, isShortMovies)
