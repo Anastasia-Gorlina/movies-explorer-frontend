@@ -1,16 +1,16 @@
-.Footer {
+.footer {
   padding: 0 70px 20px;
   margin: auto;
 }
 
 @media (min-width: 500px) and (max-width: 850px) {
-  .Footer {
+  .footer {
     padding: 0 30px 20px;
   }
 }
 
 @media (max-width: 499px) {
-  .Footer {
+  .footer {
     padding: 0 14px 10px;
   }
 }

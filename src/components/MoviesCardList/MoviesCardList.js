@@ -1,50 +1,70 @@
+import { useState, useEffect, useLayoutEffect } from 'react';
+import { useLocation } from 'react-router-dom'
 import MoviesCard from "../MoviesCard/MoviesCard";
-function MoviesCardList({isOpenSavedMovies}) {
-  const movie = {
-    _id: "63278682e04a4e4c1df02b5a",
-    country: "hfg",
-    director: "Бэнкси",
-    duration: 1.17,
-    year: "2010",
-    description: "dcd",
-    image: "https://bangbangeducation.ru/share/default.jpg",
-    trailerLink: "https://www.youtube.com/watch?v=iLafkzWDIr8",
-    thumbnail: "https://api.nomoreparties.co/uploads/thumbnail_stones_in_exile_b2f1b8f4b7.jpeg",
-    owner: "6327834990ff29d706bc9c02",
-    movieId: 3,
-    nameRU: "33 слова о дизайне",
-    nameEN: "33 words about design",
+import { MOVIES_LIST_RENDER_CONFIG } from '../../utils/Constants';
+
+function MoviesCardList({ movies, handleCardClick, savedMovies }) {
+
+  const [counter, setCounter] = useState(0);
+  const [maxAmountOfCard, setMaxAmountOfCard] = useState(0);
+  const [amountToAdd, setAmountToAdd] = useState(0);
+  const [width, setWidth] = useState(document.documentElement.clientWidth);
+  const [shownMovies, setShownMovies] = useState([]);
+  const path = useLocation().pathname;
+  const isOpenSavedMovies = path === '/saved-movies'
+
+  useEffect(() => {
+    function handleResize() {
+      setWidth(document.documentElement.clientWidth);;
+    }
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', getMoviesListRenderConfig);
+  }, [])
+
+  useEffect(() => {
+    getMoviesListRenderConfig();
+  }, [width])
+
+  useEffect(() => {
+    setShownMovies([])
+    movies.length < maxAmountOfCard + 1 ? setShownMovies(movies) : setShownMovies(movies.slice(0, maxAmountOfCard));
+    setCounter(4)
+  }, [movies, maxAmountOfCard])
+
+  function getMoviesListRenderConfig() {
+    if (width >= 1280) {
+      setMaxAmountOfCard(MOVIES_LIST_RENDER_CONFIG['1280px'].maxAmount);
+      setAmountToAdd(MOVIES_LIST_RENDER_CONFIG['1280px'].amountToAdd);
+    } else if (width > 500) {
+      setMaxAmountOfCard(MOVIES_LIST_RENDER_CONFIG['768px'].maxAmount);
+      setAmountToAdd(MOVIES_LIST_RENDER_CONFIG['768px'].amountToAdd);
+    } else {
+      setMaxAmountOfCard(MOVIES_LIST_RENDER_CONFIG['320px'].maxAmount);
+      setAmountToAdd(MOVIES_LIST_RENDER_CONFIG['320px'].amountToAdd);
+    }
   }
-  const movieSaved = {
-    _id: "63278682e04a4e4c1df02b5a",
-    country: "hfg",
-    director: "Бенкси",
-    duration: 1.17,
-    year: "2010",
-    description: "cc",
-    image: "https://bangbangeducation.ru/share/default.jpg",
-    trailerLink: "https://www.youtube.com/watch?v=iLafkzWDIr8",
-    thumbnail: "https://api.nomoreparties.co/uploads/thumbnail_stones_in_exile_b2f1b8f4b7.jpeg",
-    owner: "6327834990ff29d706bc9c02",
-    movieId: 3,
-    nameRU: "33 слова о дизайне",
-    nameEN: "33 words about design",
-    isSaved: true
+
+  function addMovies() {
+    const addingArr = movies.slice(counter * amountToAdd, (counter + 1) * amountToAdd)
+    setShownMovies(shownMovies.concat(addingArr))
+    setCounter(1 + counter)
   }
-  const movies = [movie, movie, movieSaved, movie, movie, movieSaved, movie, movieSaved, movie, movie, movie, movie,]
 
   return (
     <div className="MoviesCardList">
       <ul className="MoviesCardList__catalog">
-        {movies
-          .map((item, idx) => (
-            <li className="MoviesCardList__catalog_item" key={idx}>
-              <MoviesCard movie={item} isOpenSavedMovies={isOpenSavedMovies}/>
-            </li>
-          ))
+      {shownMovies
+          .map((item) => {
+            const isLiked = savedMovies?.findIndex(i => i.movieId === item.movieId) > -1
+            return (
+              <li className="MoviesCardList__catalog_item" key={item.movieId}>
+                <MoviesCard movie={item} isOpenSavedMovies={isOpenSavedMovies} isLiked={isLiked} handleCardClick={handleCardClick} />
+              </li>
+            )
+          })
         }
       </ul>
-      <button type="button" className="button MoviesCardList__more-button">Еще</button>
+      {movies.length !== shownMovies.length && <button type="button" className="button MoviesCardList__more-button" onClick={addMovies}>Еще</button>}
     </div>
   );
 }

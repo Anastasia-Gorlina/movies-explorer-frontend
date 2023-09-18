@@ -3,12 +3,12 @@
   flex-direction: row;
   align-items: center;
   position: relative;
-  margin: 42px auto 70px;
+  /*margin: 42px auto 70px;*/
 }
 
 
-@media (min-width: 319px) and (max-width: 850px) {
+/*@media (min-width: 319px) and (max-width: 850px) {
   .FilterCheckbox {
     margin: 39px auto 50px;
   }
-}
+}*/

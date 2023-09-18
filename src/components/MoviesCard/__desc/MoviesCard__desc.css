@@ -1,5 +1,4 @@
-.MoviesCard__des {
-    margin: 0px 18px 17px 18px;
+.MoviesCard__desc {
     display: flex;
     flex-direction: row;
     justify-content: space-between;

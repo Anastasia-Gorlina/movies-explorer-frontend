@@ -58,6 +58,7 @@
 @import url(./components/SearchForm/SearchForm.css);
 @import url(./components/SearchForm/__button/SearchForm__button.css);
 @import url(./components/SearchForm/__container/SearchForm__container.css);
+@import url(./components/SearchForm/__error/SearchForm__error.css);
 @import url(./components/SearchForm/__field/SearchForm__field.css);
 @import url(./components/SearchForm/__form/SearchForm__form.css);
 @import url(./components/SearchForm/__image/SearchForm__image.css);
@@ -131,16 +132,15 @@
 @import url(./components/Profile/__form-top/profile__form-top.css);
 @import url(./components/Profile/__form/profile__form.css);
 @import url(./components/Profile/__sign-out/profile__sign-out.css);
-@import url(./components/Profile/__sign-out/_hide/profile__sign-out_hide.css);
 @import url(./components/Profile/__title/Profile__title.css);
 @import url(./components/Profile/__data-line/profile__data-line.css);
-
+@import url(./components/Profile/__success/profile__success.css);
 
 @import url(./components/MoviesCard/MoviesCard.css);
 @import url(./components/MoviesCard/__button/MoviesCard__button.css);
 @import url(./components/MoviesCard/__button/_deleted/MoviesCard__button_deleted.css);
 @import url(./components/MoviesCard/__button/_saved/MoviesCard__button_saved.css);
-@import url(./components/MoviesCard/__des/MoviesCard__des.css);
+@import url(./components/MoviesCard/__desc/MoviesCard__desc.css);
 @import url(./components/MoviesCard/__duration/MoviesCard__duration.css);
 @import url(./components/MoviesCard/__image/MoviesCard__image.css);
 @import url(./components/MoviesCard/__info/MoviesCard__info.css);
@@ -186,3 +186,6 @@
 @import url(./components/Techs/__paragraph/techs__paragraph.css);
 @import url(./components/Techs/__subtitle/techs__subtitle.css);
 @import url(./components/Techs/__title/Techs__title.css);
+
+
+@import url(./components/NotFound/NotFound.css);

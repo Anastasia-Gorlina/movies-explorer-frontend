@@ -1,6 +1,5 @@
 .MoviesCard__button {
     background-image: url('../../../images/save.svg');
-    background-repeat: no-repeat;
     width: 72px;
     height: 21px;
     border: none;

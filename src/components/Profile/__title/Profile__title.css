@@ -1,4 +1,4 @@
-.profile__title {
+.Profile__title {
     margin-top: 17px;
     margin-bottom: 123px;
     font-weight: 500;
@@ -8,13 +8,13 @@
   }
 
   @media (min-width: 500px) and (max-width: 850px) {
-    .profile__title {
+    .Profile__title {
       margin-top: 43px;
       margin-bottom: 97px;
     }
   }
   @media (max-width: 499px) {
-    .profile__title {
+    .Profile__title {
       margin-bottom: 81px;
     }
   }

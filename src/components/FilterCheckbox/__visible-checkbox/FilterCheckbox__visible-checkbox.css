@@ -8,6 +8,6 @@
     background-size: cover;
 }
 
-.FilterCheckbox__input:checked+.visible-checkbox {
+.FilterCheckbox__input:checked+.FilterCheckbox__visible-checkbox {
     background-image: url('../../../images/checkbox-active.svg');
   }
